@@ -1,0 +1,8 @@
+@media(max-width: 576px) {
+  .banner__slider {
+    &-pagination {
+      display: flex;
+      margin-top: 8px;
+    }
+  }
+}

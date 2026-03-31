@@ -1,0 +1,175 @@
+@use '../common/variables';
+
+
+.callback {
+  padding-top: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
+  padding-bottom: clamp(0.625rem, 0.192rem + 1.92vw, 2.5rem);
+
+  & .content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 1.135rem + 0.51vw, 1.75rem);
+
+    border-radius: 28px;
+    box-shadow: 0 0 20px 0 rgba(200, 202, 214, 0.40);
+
+    padding: 32px clamp(1rem, 0.769rem + 1.03vw, 2rem);
+
+    overflow: hidden;
+
+    background-image: url("/src/assets/images/callback_bg.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+
+    &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(0.5rem, 0.442rem + 0.26vw, 0.75rem);
+
+      & h2 {
+        color: variables.$Black;
+        font-family: variables.$FontFamily;
+        font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.64px;
+
+        & span {
+          color: variables.$Logo;
+        }
+      }
+
+      & p {
+        color: #787A7D;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+      }
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &-fields {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        & .input__wrapper {
+          max-width: 327px;
+          width: 100%;
+          height: 54px;
+
+          padding: 8px 16px;
+
+          border-radius: 8px;
+          background-color: variables.$Back;
+
+          & input {
+            width: 100%;
+            height: 100%;
+
+            &::placeholder {
+              color: #787A7D;
+              font-family: variables.$FontFamily;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+            }
+          }
+        }
+
+        & .submit {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+
+          color: #FDFDFF;
+          font-family: variables.$FontFamily;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%;
+          letter-spacing: -0.32px;
+
+          max-width: 230px;
+          width: 100%;
+          height: 54px;
+
+          border-radius: 8px;
+          background-color: variables.$Logo;
+
+        }
+      }
+
+      &-policy {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & input {
+          flex-shrink: 0;
+
+          -webkit-appearance: none;
+          appearance: none;
+
+          width: 20px;
+          height: 20px;
+
+          border-radius: 4px;
+
+          border: 1px solid variables.$LightGrey;
+
+          background-color: transparent;
+
+          transition: background-color variables.$time ease, border variables.$time ease;
+
+          &:checked {
+            background-color: variables.$Logo;
+
+            border: 1px solid variables.$Logo;
+
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12' fill='none'%3E%3Cpath d='M13.25 0.75L4.5 10.75L0.75 7' stroke='%23FDFDFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+
+          }
+        }
+
+        & label {
+          color: #787A7D;
+          font-family: variables.$FontFamily;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+
+          opacity: .8;
+
+          & a {
+            color: #787A7D;
+            font-family: variables.$FontFamily;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+          }
+        }
+      }
+    }
+  }
+}

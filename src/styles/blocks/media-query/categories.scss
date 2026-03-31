@@ -1,0 +1,21 @@
+@media(max-width: 992px) {
+  .index__categories-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media(max-width: 767px) {
+  .index__categories-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .index__categories-item.sale {
+    background-size: contain;
+  }
+}
+
+@media(max-width: 576px) {
+  .index__categories-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,25 @@
+@media(max-width: 992px) {
+  .callback {
+    & .content {
+      background-image: none;
+    }
+  }
+}
+
+
+@media(max-width: 767px) {
+  .callback {
+    & .content {
+      &__form {
+        &-fields {
+          flex-direction: column;
+          align-items: start;
+
+          & .input__wrapper {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
