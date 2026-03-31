@@ -1,0 +1,23 @@
+//$Raleway: ("Bold", 700), ("Medium", 500), ("ExtraBold", 800), ("SemiBold", 600), ("Regular", 400);
+//
+//@each $name, $weight in $Raleway {
+//  @font-face {
+//    font-family: "Raleway";
+//    src: url('@/assets/fonts/Raleway/Raleway-#{$name}.ttf') format("truetype");
+//    font-weight: $weight;
+//  }
+//}
+//
+//@font-face {
+//  font-family: "Manrope";
+//  src: url('@/assets/fonts/Manrope/Manrope-Regular.ttf') format("truetype");
+//  font-weight: 400;
+//}
+//
+//@font-face {
+//  font-family: "Inter";
+//  src: url('@/assets/fonts/Inter/Inter-SemiBold.ttf') format("truetype");
+//  font-weight: 600;
+//}
+//
+//
