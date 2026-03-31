@@ -1,0 +1,84 @@
+@use '../common/variables';
+
+.footer {
+  background-color: #2D2D30;
+
+  padding: 40px 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  & .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__navigation {
+      display: flex;
+      align-items: center;
+      gap: 52px;
+
+      & .item {
+        padding: 8px 12px 8px 8px;
+      }
+
+
+      & .item__link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        color: variables.$MediumGrey;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.32px;
+      }
+
+      & .item__button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & span {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          color: variables.$MediumGrey;
+          font-family: variables.$FontFamily;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%;
+          letter-spacing: -0.32px;
+        }
+      }
+    }
+
+    &__callback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      color: #FDFDFF;
+      font-family: variables.$FontFamily;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      letter-spacing: -0.32px;
+
+      border-radius: 8px;
+      background-color: variables.$Logo;
+
+      padding: 12px 40px;
+    }
+  }
+}
