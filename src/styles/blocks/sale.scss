@@ -1,0 +1,53 @@
+@use '../common/variables';
+
+
+.sale {
+  & .content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.75rem, 1.577rem + 0.77vw, 2.5rem);
+
+    border-radius: 32px;
+    background-color : variables.$Back;
+
+    &__heading  {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-title {
+        color: variables.$Black;
+        font-family: variables.$FontFamily;
+        font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.64px;
+      }
+
+      &-link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        & span {
+          color: variables.$Black;
+          font-family: variables.$FontFamily;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%;
+          letter-spacing: -0.32px;
+
+          padding-bottom: 2px;
+
+          border-bottom: 1px solid #BDBEC2;
+        }
+
+        & svg {
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

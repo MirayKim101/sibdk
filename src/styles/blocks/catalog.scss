@@ -1,15 +1,32 @@
 @use '../common/variables';
 
-.index__categories {
-  padding-bottom: 10px;
 
-  &-list {
+.catalog {
+  padding-bottom: 40px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  &__heading {
+    color: variables.$Black;
+    font-family: variables.$FontFamily;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.64px;
+  }
+
+  &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: clamp(9.938rem, 9.115rem + 3.65vw, 13.5rem);
     gap: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
 
-    & .index__categories-item {
+    & .catalog__item {
       position: relative;
 
       border-radius: 12px;
@@ -25,19 +42,17 @@
       background-position: center;
       background-size: cover;
 
-     &:not(.sale) {
-       &::after {
-         content: '';
+      &::after {
+        content: '';
 
-         position: absolute;
-         inset: 0;
+        position: absolute;
+        inset: 0;
 
-         width: 100%;
-         height: 100%;
+        width: 100%;
+        height: 100%;
 
-         background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20);
-       }
-     }
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20);
+      }
 
       & .overlay {
         position: absolute;
@@ -100,36 +115,8 @@
         z-index: 1;
       }
 
-      &.sale {
-        background-image: url("/src/assets/images/sale_bg.svg");
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        background-size: auto;
 
-        & .heading {
-          & h3 {
-            color: variables.$Black;
-
-          }
-        }
-
-        & .percent {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-
-          width: auto;
-          height: clamp(6.688rem, 6.125rem + 2.5vw, 9.125rem);
-
-          object-fit: cover;
-
-          z-index: 1;
-        }
-      }
     }
+
   }
 }
-
-
-
-

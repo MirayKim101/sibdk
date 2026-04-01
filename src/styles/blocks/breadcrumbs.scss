@@ -1,0 +1,43 @@
+@use '../common/variables';
+
+.breadcrumbs {
+  margin-bottom: 12px;
+  &__list {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    &-item {
+      display: flex;
+      align-items: center;
+
+      & a, span {
+        color: variables.$MediumGrey;
+        font-family: variables.$FontFamily;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.28px;
+      }
+
+      &:not(:last-child)::after {
+        content: "";
+
+        display: block;
+
+        width: 12px;
+        height: 12px;
+
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='9' viewBox='0 0 6 9' fill='none'%3E%3Cpath d='M1 1L4.375 4.375L1 7.75' stroke='%23BDBEC2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        margin: 0 4px;
+
+      }
+    }
+  }
+}

@@ -23,7 +23,7 @@ button {
   cursor: pointer;
 }
 
-input {
+input,textarea {
   border: none;
   outline: none;
   background: none;
@@ -43,5 +43,13 @@ main {
 
 body {
   font-family: variables.$FontFamily;
+
+}
+
+.page__index {
   background-color: variables.$Back;
+}
+
+.page__catalog {
+  background-color: #FDFDFF;
 }
