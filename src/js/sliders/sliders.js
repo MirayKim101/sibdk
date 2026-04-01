@@ -23,22 +23,62 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const hitsSlider = document.querySelector('.hits .hits__content-slider .swiper');
-    if (!hitsSlider) return;
+    const hitsSliderEl = document.querySelector('.hits .hits__content-slider .swiper');
+    if (!hitsSliderEl) return;
 
-    new Swiper(hitsSlider, {
-        modules: [Navigation, Pagination],
-        slidesPerView: 5,
-        watchOverflow: true,
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.hits__content-next',
-            prevEl: '.hits__content-prev',
-        },
+    let hitsSwiper = null;
 
+    const initHitsSlider = () => {
+        const isMobile = window.innerWidth < 576;
 
+        if (isMobile) {
+            if (hitsSwiper) {
+                hitsSwiper.destroy(true, true);
+                hitsSwiper = null;
+            }
+            return;
+        }
 
-    });
+        if (!hitsSwiper) {
+            hitsSwiper = new Swiper(hitsSliderEl, {
+                modules: [Navigation, Pagination],
+                slidesPerView: 5,
+                spaceBetween: 20,
+                watchOverflow: true,
+                navigation: {
+                    nextEl: '.hits__content-next',
+                    prevEl: '.hits__content-prev',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 'auto',
+                        enabled: false,
+                    },
+
+                    577: {
+                        slidesPerView: 2,
+                        enabled: true,
+                    },
+
+                    780: {
+                        slidesPerView: 3,
+                    },
+
+                    1024: {
+                        slidesPerView: 4,
+                    },
+
+                    1400: {
+                        slidesPerView: 5,
+                    }
+                }
+            });
+        }
+    };
+
+    initHitsSlider();
+
+    window.addEventListener('resize', initHitsSlider);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
