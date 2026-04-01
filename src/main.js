@@ -4,4 +4,5 @@ import './styles/main.scss';
 
 
 import './js/sliders/sliders.js';
+import './js/menu/footer.js';
 
