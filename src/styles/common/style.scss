@@ -23,7 +23,7 @@ button {
   cursor: pointer;
 }
 
-input,textarea {
+input, textarea {
   border: none;
   outline: none;
   background: none;
@@ -35,6 +35,7 @@ input,textarea {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 100%;
 }
 
 main {
@@ -43,7 +44,7 @@ main {
 
 body {
   font-family: variables.$FontFamily;
-
+  transition: background-color variables.$time ease;
 }
 
 .page__index {

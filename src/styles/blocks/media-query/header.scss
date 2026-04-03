@@ -1,0 +1,143 @@
+@media(max-width: 1400px) {
+  .header {
+    & .content {
+      &__bottom {
+        &-content {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 8px;
+
+          padding: clamp(1rem, 0.899rem + 0.45vw, 1.438rem) clamp(1rem, -0.212rem + 5.38vw, 6.25rem) 12px clamp(1rem, -0.212rem + 5.38vw, 6.25rem);
+
+          & .condition {
+            display: contents;
+
+            &__caption {
+
+
+              grid-row: 2;
+            }
+
+            &__tag {
+              justify-self: end;
+
+              grid-row: 2;
+
+              z-index: 2;
+
+            }
+          }
+
+          & .image {
+            right: 0;
+            left: auto;
+
+            width: 140px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 992px) {
+  .header {
+
+    & .content {
+
+      &__top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        height: auto;
+
+        margin-bottom: 10px;
+
+        &-catalog {
+          display: none;
+        }
+
+        &-search {
+          max-width: 100%;
+
+          grid-row: 2;
+          grid-column: span 2;
+
+          & .search__wrapper {
+            & input {
+              padding: 12px 44px 12px 16px;
+            }
+
+          }
+        }
+
+        &-callback {
+          display: none;
+        }
+
+        &-socials {
+          justify-self: end;
+
+          & .socials__item {
+            &.item__mobile {
+              display: flex;
+            }
+          }
+        }
+
+        &-cart {
+          display: none;
+        }
+      }
+
+      &__middle {
+        display: none;
+      }
+    }
+  }
+
+  .mobile__navigation {
+    display: block;
+  }
+}
+
+@media(max-width: 767px) {
+  .header {
+    & .content {
+      &__bottom {
+        &-content {
+          padding: clamp(1rem, 0.899rem + 0.45vw, 1.438rem) clamp(1rem, -0.212rem + 5.38vw, 6.25rem) 16px clamp(1rem, -0.212rem + 5.38vw, 6.25rem);
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 576px) {
+  .header {
+    &__wrapper {
+      &.container {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    & .content {
+      &__bottom {
+        &-content {
+          & .condition {
+            &__caption {
+              width:  185px;
+            }
+          }
+        }
+      }
+    }
+
+    & .header__mobile-menu {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
