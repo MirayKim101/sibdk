@@ -552,6 +552,8 @@
 
         & .item {
           padding: 8px 12px 8px 8px;
+
+
         }
 
         & .item__link {
@@ -566,6 +568,21 @@
           font-weight: 500;
           line-height: 110%;
           letter-spacing: -0.32px;
+          transition: color variables.$time ease;
+
+          & svg {
+            fill: #414145;
+            transition: fill variables.$time ease;
+          }
+
+          &:hover {
+            color: variables.$Logo;
+
+            & svg {
+              fill: #FF9EA3;
+            }
+          }
+
         }
 
         & .item__context {
@@ -586,11 +603,19 @@
             border-radius: 4px;
             background-color: variables.$Back;
 
+            & svg {
+              stroke: #FF9EA3;
+              fill: #FF9EA3;
+            }
+
             & span {
               color: variables.$Logo;
 
               & svg {
-                stroke: variables.$Logo;
+                stroke: #FF9EA3;
+                fill: #FF9EA3;
+
+                transform: rotate(.5turn);
               }
             }
           }
@@ -660,6 +685,13 @@
 
           transition: background-color variables.$time ease;
 
+          & svg {
+            stroke: #787A7D;
+            fill: #787A7D;
+
+            transition: stroke variables.$time ease, fill variables.$time ease;
+          }
+
           & span {
             display: flex;
             align-items: center;
@@ -673,10 +705,24 @@
             line-height: 110%;
             letter-spacing: -0.32px;
 
+            transition: color variables.$time ease;
+
             & svg {
               stroke: #BDBEC2;
 
-              transition: stroke variables.$time ease;
+              transition: stroke variables.$time ease, fill variables.$time ease, transform variables.$time ease;
+
+            }
+          }
+
+          &:hover {
+            & span {
+              color: variables.$Logo;
+            }
+
+            & svg {
+              stroke: #FF9EA3;
+              fill: #FF9EA3;
             }
           }
         }

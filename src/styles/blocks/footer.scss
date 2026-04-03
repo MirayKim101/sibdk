@@ -41,6 +41,21 @@
         font-weight: 500;
         line-height: 110%;
         letter-spacing: -0.32px;
+
+        transition: color variables.$time ease;
+
+        & svg {
+          fill: #414145;
+          transition: fill variables.$time ease;
+        }
+
+        &:hover {
+          color: variables.$Red2;
+
+          & svg {
+            fill: variables.$Red2;
+          }
+        }
       }
 
       & .item__context {
@@ -60,6 +75,23 @@
         &.active .item__button {
           border-radius: 4px;
           background-color: #414146;
+
+          & svg {
+            stroke: variables.$Red2;
+            fill: variables.$Red2;
+
+          }
+
+          & span {
+            color: variables.$Red2;
+
+            & svg {
+              stroke: variables.$Red2;
+
+              transform: rotate(.5turn);
+
+            }
+          }
         }
       }
 
@@ -125,6 +157,13 @@
 
         transition: background-color variables.$time ease;
 
+        & svg {
+          stroke: #787A7D;
+          fill: #787A7D;
+
+          transition: stroke variables.$time ease, fill variables.$time ease;
+        }
+
         & span {
           display: flex;
           align-items: center;
@@ -137,6 +176,24 @@
           font-weight: 500;
           line-height: 110%;
           letter-spacing: -0.32px;
+
+          & svg {
+            stroke: #BDBEC2;
+
+            transition: stroke variables.$time ease, transform variables.$time ease;
+          }
+        }
+
+        &:hover {
+
+          & span {
+            color: variables.$Red2;
+          }
+
+          & svg {
+            stroke: variables.$Red2;
+            fill: variables.$Red2;
+          }
         }
       }
     }
