@@ -1,0 +1,22 @@
+[
+  { "id": 1, "title": "Профнастил С8 оцинкованный", "price": 1200, "oldPrice": 1400, "sale": 14, "image": "https://picsum.photos/100?1" },
+  { "id": 2, "title": "Металлочерепица Монтеррей", "price": 2100, "oldPrice": 2500, "sale": 16, "image": "https://picsum.photos/100?2" },
+  { "id": 3, "title": "Профлист Н60 усиленный", "price": 1800, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?3" },
+  { "id": 4, "title": "Сайдинг виниловый", "price": 900, "oldPrice": 1100, "sale": 18, "image": "https://picsum.photos/100?4" },
+  { "id": 5, "title": "Труба профильная", "price": 700, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?5" },
+  { "id": 6, "title": "Уголок металлический", "price": 500, "oldPrice": 650, "sale": 23, "image": "https://picsum.photos/100?6" },
+  { "id": 7, "title": "Профнастил С21 красный", "price": 1300, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?7" },
+  { "id": 8, "title": "Лист оцинкованный", "price": 1000, "oldPrice": 1200, "sale": 17, "image": "https://picsum.photos/100?8" },
+  { "id": 9, "title": "Сэндвич панель", "price": 3200, "oldPrice": 3500, "sale": 9, "image": "https://picsum.photos/100?9" },
+  { "id": 10, "title": "Профлист Н75", "price": 2000, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?10" },
+  { "id": 11, "title": "Саморез кровельный", "price": 300, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?11" },
+  { "id": 12, "title": "Профнастил С10 зеленый", "price": 1250, "oldPrice": 1450, "sale": 14, "image": "https://picsum.photos/100?12" },
+  { "id": 13, "title": "Швеллер металлический", "price": 2700, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?13" },
+  { "id": 14, "title": "Арматура строительная", "price": 800, "oldPrice": 950, "sale": 16, "image": "https://picsum.photos/100?14" },
+  { "id": 15, "title": "Лист нержавеющий", "price": 3500, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?15" },
+  { "id": 16, "title": "Профнастил С44", "price": 1700, "oldPrice": 1900, "sale": 11, "image": "https://picsum.photos/100?16" },
+  { "id": 17, "title": "Металлочерепица классик", "price": 2300, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?17" },
+  { "id": 18, "title": "Профлист декоративный", "price": 1400, "oldPrice": 1600, "sale": 13, "image": "https://picsum.photos/100?18" },
+  { "id": 19, "title": "Сайдинг под дерево", "price": 1100, "oldPrice": null, "sale": null, "image": "https://picsum.photos/100?19" },
+  { "id": 20, "title": "Кровельный конек", "price": 600, "oldPrice": 750, "sale": 20, "image": "https://picsum.photos/100?20" }
+]
