@@ -5,6 +5,7 @@
   padding-top: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
   padding-bottom: clamp(0.625rem, 0.192rem + 1.92vw, 2.5rem);
 
+
   & .content {
     display: flex;
     flex-direction: column;
@@ -21,6 +22,8 @@
     background-repeat: no-repeat;
     background-position: right top;
     background-size: contain;
+
+    background-color: #FDFDFF;
 
     &__heading {
       display: flex;
@@ -66,14 +69,18 @@
           width: 100%;
           height: 54px;
 
-          padding: 8px 16px;
+
 
           border-radius: 8px;
-          background-color: variables.$Back;
+          overflow: hidden;
 
           & input {
             width: 100%;
             height: 100%;
+
+            background-color: variables.$Back;
+
+            padding: 8px 16px;
 
             &::placeholder {
               color: #787A7D;

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const hitsSliderEl = document.querySelector('.hits .hits__content-slider .swiper');
+    const hitsSliderEl = document.querySelector('.hits__slider');
     if (!hitsSliderEl) return;
 
     let hitsSwiper = null;
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 spaceBetween: 20,
                 watchOverflow: true,
                 navigation: {
-                    nextEl: '.hits__content-next',
-                    prevEl: '.hits__content-prev',
+                    prevEl: '.slider__button-prev',
+                    nextEl: '.slider__button-next',
                 },
                 breakpoints: {
                     0: {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const hitsInnerSliders = document.querySelectorAll('.hits__card .top__slider .swiper');
+    const hitsInnerSliders = document.querySelectorAll('.image__slider .swiper');
     if (hitsInnerSliders.length === 0) return;
 
     hitsInnerSliders.forEach((slider)=> {
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spaceBetween: 5,
             nested: true,
             pagination: {
-                el: slider.closest('.top').querySelector('.top__slider-pagination'),
+                el: slider.closest('.product__card-content .image__wrapper').querySelector('.image__pagination'),
                 clickable: true,
             },
         })

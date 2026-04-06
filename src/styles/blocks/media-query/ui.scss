@@ -1,0 +1,14 @@
+@media(max-width: 576px) {
+  .product__card {
+    &-content {
+      & .price {
+        flex-direction: column-reverse;
+        align-items: start;
+      }
+
+      & .control {
+        display: none;
+      }
+    }
+  }
+}
