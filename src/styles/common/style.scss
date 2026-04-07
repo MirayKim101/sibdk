@@ -48,9 +48,13 @@ body {
 }
 
 .page__index {
-  background-color:#FDFDFF;
+  background-color: #FDFDFF;
 }
 
 .page__catalog {
   background-color: #FDFDFF;
+}
+
+.page__about {
+  background-color: variables.$Back;
 }
