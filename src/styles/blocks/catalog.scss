@@ -35,5 +35,39 @@
     }
   }
 
+}
 
+.subcategory {
+  padding: clamp(1.25rem, 0.962rem + 1.28vw, 2.5rem) 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 0.442rem + 0.26vw, 0.75rem);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 1.135rem + 0.51vw, 1.75rem);
+
+    &-heading {
+      color: variables.$Black;
+      font-family: variables.$FontFamily;
+      font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      letter-spacing: -0.64px;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: clamp(9.938rem, 9.115rem + 3.65vw, 13.5rem);
+      gap: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
+
+
+    }
+  }
 }

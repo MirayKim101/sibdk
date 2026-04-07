@@ -423,3 +423,248 @@
   }
 }
 
+.callback__modal {
+  position: relative;
+
+  border-radius: 12px;
+  background-color: #FDFDFF;
+
+  & .modal {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__title {
+      color: variables.$Black;
+      font-family: variables.$FontFamily;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      letter-spacing: -0.64px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      & .fields {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        &__wrapper {
+          width: 100%;
+          height: 54px;
+
+          & input {
+            width: 100%;
+            height: 100%;
+
+            padding: 16px;
+
+            border-radius: 8px;
+
+            background-color: variables.$Back;
+
+            color: variables.$Grey;
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+
+            &::placeholder {
+              color: variables.$Grey;
+              font-family: variables.$FontFamily;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+
+            }
+          }
+        }
+      }
+
+      & .licenses {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        & input {
+          -webkit-appearance: none;
+          appearance: none;
+
+          flex-shrink: 0;
+
+          width: 20px;
+          height: 20px;
+
+          border-radius: 4px;
+
+          border: 1px solid variables.$LightGrey;
+
+          background-color: transparent;
+
+          transition: background-color variables.$time ease, border variables.$time ease;
+
+          &:checked {
+            background-color: variables.$Logo;
+
+            border: 1px solid variables.$Logo;
+
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12' fill='none'%3E%3Cpath d='M13.25 0.75L4.5 10.75L0.75 7' stroke='%23FDFDFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+
+          }
+        }
+
+        & label {
+          color: variables.$Grey;
+          font-family: variables.$FontFamily;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+
+          & a {
+            color: variables.$Logo;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: none;
+            text-decoration-color: #FF9EA3;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+          }
+        }
+      }
+
+      & .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        width: 100%;
+        height: 52px;
+
+        color: #FDFDFF;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.32px;
+
+        border-radius: 8px;
+        background-color: variables.$Logo;
+      }
+    }
+  }
+
+  & .f-button.is-close-button {
+    top: 16px;
+    right: 16px;
+    left: auto;
+
+    & svg {
+      stroke: variables.$MediumGrey;
+    }
+  }
+
+}
+
+
+.subcategory__card {
+  position: relative;
+
+  border-radius: 16px;
+  background-color: variables.$Back;
+
+  overflow: hidden;
+
+  background-image: url("../../assets/images/subcategory.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: clamp(0.5rem, 0.327rem + 0.77vw, 1.25rem);
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20);
+  }
+
+  & .overlay {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+  }
+
+  & .content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    &__heading {
+      color: #FDFDFF;
+      font-family: variables.$FontFamily;
+      font-size:clamp(1rem, 0.942rem + 0.26vw, 1.25rem);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: -0.4px;
+
+
+    }
+
+    &__image {
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      display: block;
+
+      & img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+      }
+    }
+
+    & svg {
+
+      align-self: end;
+
+
+    }
+  }
+}

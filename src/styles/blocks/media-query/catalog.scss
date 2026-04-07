@@ -6,11 +6,26 @@
       }
     }
   }
+
+  .subcategory {
+    &__content {
+      &-list {
+        grid-template-columns: repeat(5,1fr);
+      }
+    }
+  }
 }
 
 
 @media(max-width: 992px) {
   .catalog {
+    &__content {
+      &-list {
+        grid-template-columns: repeat(4,1fr);
+      }
+    }
+  }
+  .subcategory {
     &__content {
       &-list {
         grid-template-columns: repeat(4,1fr);
@@ -28,11 +43,25 @@
       }
     }
   }
+  .subcategory {
+    &__content {
+      &-list {
+        grid-template-columns: repeat(3,1fr);
+      }
+    }
+  }
 }
 
 
 @media(max-width: 576px) {
   .catalog {
+    &__content {
+      &-list {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+  }
+  .subcategory {
     &__content {
       &-list {
         grid-template-columns: repeat(2,1fr);
