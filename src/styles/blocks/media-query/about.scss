@@ -1,14 +1,40 @@
 @media(max-width: 992px) {
-  .about__advantages {
+  .about__achievements {
     & .content__list {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .about__advantages {
+    & .content {
+      &__list {
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+    }
+  }
+}
+
+
+@media(max-width: 767px) {
+  .about__advantages {
+
+    &-wrapper.container {
+      padding: 0;
+    }
+
+    & .content {
+      &__list {
+        grid-template-columns: repeat(2, 1fr);
+
+      }
     }
   }
 }
 
 
 @media(max-width: 576px) {
-  .about__advantages {
+  .about__achievements {
 
     &-wrapper.container {
       padding: 0;
@@ -26,4 +52,6 @@
       background-color: #FDFDFF;
     }
   }
+
+
 }

@@ -668,7 +668,7 @@
   }
 }
 
-.advantages__item {
+.achievements__item {
 
   border: 1px solid variables.$Line;
 
@@ -748,4 +748,56 @@
   }
 
 
+}
+
+.advantages__item {
+
+  border-radius: 20px;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(130, 1, 32, 0.20) 100%);
+
+  padding: clamp(0.75rem, 0.635rem + 0.51vw, 1.25rem);
+
+  &-content {
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & .image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 60px;
+      height: 60px;
+
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.80);
+
+      padding: 10px;
+
+      & img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: contain;
+      }
+    }
+
+    & .text {
+      color: #FDFDFF;
+      font-family: variables.$FontFamily;
+      font-size: clamp(1.125rem, 1.038rem + 0.38vw, 1.5rem);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+
+  }
 }
