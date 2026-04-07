@@ -1,8 +1,8 @@
 @use '../common/variables';
 
 .hits {
-  margin-top: clamp(0rem, -0.288rem + 1.28vw, 1.25rem);
-  margin-bottom: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
+  padding-top: clamp(0rem, -0.288rem + 1.28vw, 1.25rem);
+  padding-bottom: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
 
   & .content {
     & .heading {
@@ -88,57 +88,4 @@
 
   }
 }
-
-
-//.hits {
-
-//
-//  &__content {
-//
-//    &-slider {
-//
-//      & .swiper {
-//
-//        & .hits__content-slides {
-//          position: relative;
-//
-//          border-radius: 16px;
-//          padding-top: 28px;
-//          padding-bottom: 20px;
-//
-//          & .hits__card {
-
-//
-//            &-content {
-//
-//              & .top {
-//
-//                &__slider {
-//
-//                    &__rest {
-//                      color: variables.$MediumGrey;
-//                      font-family: variables.$FontFamily;
-//                      font-size: 12px;
-//                      font-style: normal;
-//                      font-weight: 500;
-//                      line-height: 14px;
-//                      letter-spacing: -0.24px;
-//                    }
-//                  }
-//
-
-//                }
-//              }
-//
-
-//
-
-
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
 

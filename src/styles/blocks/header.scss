@@ -490,12 +490,30 @@
           border-radius: 4px;
           border: 1px solid variables.$LightGrey;
 
+          & svg {
+            stroke: #787A7D;
+            fill: #787A7D;
+
+            transition: stroke variables.$time ease, fill variables.$time ease;
+          }
+
           &.address {
             background-color: #EEEFF1;
+
+
           }
 
           &.item__mobile {
             display: none;
+
+
+          }
+
+          &:hover {
+            & svg {
+              stroke: #0B3067;
+              fill: #0B3067;
+            }
           }
         }
       }

@@ -1,16 +1,23 @@
 @use '/src/styles/common/variables.scss';
 
 
+@media(max-width: 767px) {
+  .sale {
+    & .content {
+      overflow: hidden;
+
+      &__image {
+        left: -140px;
+      }
+    }
+  }
+}
+
 @media(max-width: 576px) {
-  .hits {
+  .sale {
 
     & .content {
-      border-radius: 20px;
-      background-color: #FDFDFF;
       padding: 20px 0;
-
-      box-shadow: 0 0 20px 0 rgba(200, 202, 214, 0.40);
-
 
       & .heading {
         padding: 0 16px;
@@ -23,7 +30,7 @@
           display: none;
         }
 
-        & .hits__slider {
+        & .sale__slider {
           &-wrapper {
             display: flex;
             overflow-x: auto;
@@ -53,6 +60,11 @@
           }
         }
       }
+
+      &__image {
+        left: -140px;
+        bottom: 50px;
+      }
     }
 
     &__wrapper.container {
@@ -62,3 +74,14 @@
   }
 }
 
+
+@media(max-width: 480px) {
+  .sale {
+    & .content {
+      &__image {
+        left: -270px;
+        bottom: 60px;
+      }
+    }
+  }
+}

@@ -2,20 +2,27 @@
 
 
 .sale {
+  padding-top: clamp(1.875rem, 1.442rem + 1.92vw, 3.75rem);
+  padding-bottom: clamp(1.875rem, 1.442rem + 1.92vw, 3.75rem);
+
   & .content {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.75rem, 1.577rem + 0.77vw, 2.5rem);
+    position: relative;
 
     border-radius: 32px;
-    background-color : variables.$Back;
+    background-color: variables.$Back;
 
-    &__heading  {
+    padding: 40px 32px;
+
+    & .heading {
+      position: relative;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      &-title {
+      z-index: 1;
+
+      &__title {
         color: variables.$Black;
         font-family: variables.$FontFamily;
         font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
@@ -25,29 +32,86 @@
         letter-spacing: -0.64px;
       }
 
-      &-link {
+
+    }
+
+    &__wrapper {
+      position: relative;
+
+      & .slider__button-prev, & .slider__button-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 40px;
+        height: 40px;
+
         display: flex;
         align-items: center;
-        gap: 4px;
+        justify-content: center;
 
-        & span {
-          color: variables.$Black;
-          font-family: variables.$FontFamily;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 110%;
-          letter-spacing: -0.32px;
+        border-radius: 8px;
+        background-color: #FDFDFF;
+        box-shadow: 0 0 6px 0 rgba(194, 194, 194, 0.40);
 
-          padding-bottom: 2px;
+        z-index: 4;
 
-          border-bottom: 1px solid #BDBEC2;
-        }
+        transition: opacity variables.$time ease, background-color variables.$time ease;
+
 
         & svg {
-          flex-shrink: 0;
+          stroke: #9C0228;
+        }
+
+        &:not(.swiper-button-disabled):hover {
+          background-color: variables.$Logo;
+
+          & svg {
+            stroke: #FDFDFF;
+          }
+
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0.6;
+        }
+
+
+      }
+
+      & .slider__button-prev {
+        left: -20px;
+      }
+
+      & .slider__button-next {
+        right: -20px;
+      }
+
+
+      & .sale__slider {
+        &-slide {
+          position: relative;
+
+          padding-top: 28px;
+          padding-bottom: 20px;
         }
       }
     }
+
+    &__image {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      display: block;
+
+      width: auto;
+      height: clamp(27.375rem, 24.606rem + 12.31vw, 39.375rem);
+
+
+
+    }
+
   }
 }
+
