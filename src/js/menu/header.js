@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-
     const menus = [
         {
             trigger: '.content__top-catalog',
@@ -87,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector(".header");
