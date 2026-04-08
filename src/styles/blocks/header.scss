@@ -1240,24 +1240,20 @@
   padding: 28px clamp(1rem, 0.942rem + 0.26vw, 1.25rem);
 
   opacity: 0;
-  transform: translateX(10px);
   visibility: hidden;
   pointer-events: none;
 
   overflow: hidden;
 
   transition: opacity variables.$time ease,
-  transform variables.$time ease,
   visibility 0s linear variables.$time;
 
   &.active {
     opacity: 1;
-    transform: translateX(0);
     visibility: visible;
     pointer-events: auto;
 
     transition: opacity variables.$time ease,
-    transform variables.$time ease,
     visibility 0s;
   }
 

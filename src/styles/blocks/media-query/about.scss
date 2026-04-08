@@ -13,6 +13,43 @@
       }
     }
   }
+
+  .about__steps {
+    padding-top: 24px;
+
+    border-radius: 20px;
+    background-color: #FDFDFF;
+
+    & .content {
+      grid-template-columns: 1fr;
+
+      & .content__process {
+        grid-row: 2;
+
+        &-image {
+          height: auto;
+        }
+      }
+
+      & .content__steps {
+        & .steps__item {
+          max-width: 100%;
+
+          flex-direction: column;
+
+          justify-content: start;
+
+          &-number {
+            align-self: end;
+          }
+
+          &-content {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
 

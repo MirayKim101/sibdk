@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hitsInnerSliders = document.querySelectorAll('.hits .image__slider .swiper');
     if (hitsInnerSliders.length === 0) return;
 
-    hitsInnerSliders.forEach((slider)=> {
+    hitsInnerSliders.forEach((slider) => {
         new Swiper(slider, {
             modules: [Pagination],
             slidesPerView: 1,
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const saleInnerSliders = document.querySelectorAll('.sale .image__slider .swiper');
     if (saleInnerSliders.length === 0) return;
 
-    saleInnerSliders.forEach((slider)=> {
+    saleInnerSliders.forEach((slider) => {
         new Swiper(slider, {
             modules: [Pagination],
             slidesPerView: 1,
@@ -174,4 +174,37 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         })
     })
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const clientSlider = document.querySelector('.about__clients-slider .clients__slider.swiper');
+    if (!clientSlider) return;
+
+
+    new Swiper(clientSlider, {
+        modules: [Navigation, Pagination],
+        slidesPerView: 4,
+        watchOverflow: true,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.about__clients-next',
+            prevEl: '.about__clients-prev',
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1.5,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1400: {
+                slidesPerView: 4,
+            }
+        }
+
+    });
 });
