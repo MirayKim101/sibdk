@@ -802,7 +802,6 @@
   }
 }
 
-
 .steps__item {
   max-width: 927px;
   width: 100%;
@@ -892,6 +891,198 @@
         text-underline-offset: auto;
         text-underline-position: from-font;
       }
+    }
+  }
+}
+
+.benefits__item {
+  position: relative;
+
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  background-image: url("../../assets/images/benefits_card.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(42, 42, 42, 0.40);
+  }
+
+  &-content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    padding: clamp(1.25rem, 1.135rem + 0.51vw, 1.75rem);
+
+    & .text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      & h3 {
+        color: #FDFDFF;
+        font-family: variables.$FontFamily;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+
+      & p {
+        color: #FDFDFF;
+        font-family: variables.$FontFamily;
+        font-size: clamp(1rem, 0.942rem + 0.26vw, 1.25rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+      }
+    }
+
+    & .tag {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+
+      width: 70%;
+
+      clip-path: polygon(
+                      0 0,
+                      80% 0,
+                      90% 50%,
+                      100% 100%,
+                      0 100%
+      );
+
+      color: #FDFDFF;
+      font-family: variables.$FontFamily;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+
+      padding: 6px clamp(0.5rem, 0.442rem + 0.26vw, 0.75rem);
+
+      background: linear-gradient(90deg, #FC466B 0%, #9C0228 100%);
+
+      z-index: 1;
+    }
+  }
+}
+
+.accordions__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
+
+  &-item {
+    width: 100%;
+
+    & .header {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+
+      color: variables.$Black;
+      font-family: variables.$FontFamily;
+      font-size: clamp(1.25rem, 1.192rem + 0.26vw, 1.5rem);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      text-align: left;
+
+      border-radius: 12px;
+      background-color: variables.$Back;
+
+      padding: 20px 24px;
+
+      & svg {
+        flex-shrink: 0;
+
+        stroke: #9C0228;
+
+        transition: transform variables.$time ease;
+      }
+    }
+
+    & .content {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity variables.$time ease;
+
+      border-radius: 12px;
+      background-color: variables.$Back;
+
+
+      &__inner {
+        overflow: hidden;
+
+        opacity: 0;
+        transform: translateY(-10px);
+
+        transition: opacity variables.$time ease,
+        transform variables.$time ease,
+        padding variables.$time ease;
+
+        & p {
+          color: variables.$Grey;
+          font-family: variables.$FontFamily;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+    }
+
+    &.active .content {
+      grid-template-rows: 1fr;
+      opacity: 1;
+
+      &__inner {
+        padding: 24px;
+        opacity: 1;
+        transform: translateY(0);
+
+      }
+
+    }
+
+    &.active .header {
+      background-color: variables.$Logo;
+      color: #FDFDFF;
+
+      & svg {
+        stroke: #FDFDFF;
+        transform: rotate(-45deg);
+      }
+
     }
   }
 }

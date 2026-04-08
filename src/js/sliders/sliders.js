@@ -208,3 +208,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const brandsSlider = document.querySelector('.about__brands-slider .brands__slider.swiper');
+    if (!brandsSlider) return;
+
+
+    new Swiper(brandsSlider, {
+        modules: [Navigation, Pagination],
+        slidesPerView: 4,
+        watchOverflow: true,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.about__brands-next',
+            prevEl: '.about__brands-prev',
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1.7,
+            },
+            576: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 3,
+            },
+
+            992: {
+                slidesPerView: 4,
+            },
+        }
+
+
+    });
+});

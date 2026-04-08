@@ -1,5 +1,93 @@
 @use '../common/variables';
 
+.about__banner {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  width: 100%;
+  height: 480px;
+
+  & .content {
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 768px 1fr;
+    gap: 20px;
+
+    border-radius: 40px;
+
+    overflow: hidden;
+
+    background-image: url("../../assets/images/about_banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__info {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 40px 0 40px 40px;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        & p {
+          color: #BB8C8C;
+          font-family: variables.$FontFamily;
+          font-size: clamp(1rem, 0.942rem + 0.26vw, 1.25rem);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+        }
+
+        & h1 {
+          color: variables.$Black;
+          font-family: variables.$FontFamily;
+          font-size: clamp(2rem, 1.712rem + 1.28vw, 3.25rem);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%;
+          letter-spacing: -2.08px;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+
+      padding: 20px 20px 20px 0;
+
+      & .image {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 16px;
+
+        overflow: hidden;
+
+        & img {
+          width: 100%;
+          height: 100%;
+
+          display: block;
+
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
 
 .about__achievements {
   padding-top: clamp(0.625rem, 0.481rem + 0.64vw, 1.25rem);
@@ -247,7 +335,7 @@
 .about__clients {
 
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: clamp(1.25rem, 0.962rem + 1.28vw, 2.5rem);
 
   &-wrapper {
     display: flex;
@@ -342,4 +430,193 @@
       }
     }
   }
+}
+
+.about__benefits {
+  padding-bottom: 20px;
+
+  & .content {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: clamp(20rem, 18.846rem + 5.13vw, 25rem);
+      gap: 20px;
+
+
+    }
+  }
+}
+
+.about__brands {
+
+  padding-top: 20px;
+  padding-bottom: clamp(1.25rem, 0.962rem + 1.28vw, 2.5rem);
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 1.135rem + 0.51vw, 1.75rem);
+  }
+
+  &-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .title {
+      color: variables.$Black;
+      font-family: variables.$FontFamily;
+      font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%;
+      letter-spacing: -0.64px;
+    }
+
+    & .controls {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      gap: 12px;
+
+      & button {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 8px;
+
+        background-color: variables.$White;
+
+        box-shadow: 0 0 4px 0 rgba(194, 194, 194, 0.40);
+
+        transition: background-color variables.$time ease;
+
+        & svg {
+          stroke: #9C0228;
+
+          transition: stroke variables.$time ease;
+        }
+
+        &:not(.swiper-button-disabled):hover {
+          background-color: variables.$Logo;
+
+          & svg {
+            stroke: #FDFDFF;
+          }
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0.6;
+
+          & svg {
+            stroke: #FF9EA3;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  &-slider {
+
+    & .brands__slider {
+      height: clamp(12.5rem, 10.553rem + 8.65vw, 20.938rem);
+
+      &-slide {
+        width: 100%;
+        height: 100%;
+
+
+        &.single {
+          border-radius: 12px;
+
+          border: 1px solid variables.$Line;
+
+          background-color: variables.$Back;
+
+          & .content {
+            width: 100%;
+            height: 100%;
+
+            padding: 28px;
+
+            & .image {
+              width: 100%;
+              height: 100%;
+
+              display: block;
+
+              & img {
+                width: 100%;
+                height: 100%;
+
+                display: block;
+
+                object-fit: contain;
+              }
+            }
+          }
+        }
+
+        &.multi {
+          & .content {
+            width: 100%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+
+            & .image {
+              padding: 16px;
+
+              border-radius: 12px;
+
+              border: 1px solid variables.$Line;
+
+              background-color: #FDFDFF;
+
+              box-shadow: 0 0 20px 0 rgba(200, 202, 214, 0.40);
+
+              display: block;
+
+              & img {
+                width: 100%;
+                height: 100%;
+
+                display: block;
+
+                object-fit: contain;
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+  }
+}
+
+.about__accordions {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 1.135rem + 0.51vw, 1.75rem);
+  }
+
+  &-title {
+    color: variables.$Black;
+    font-family: variables.$FontFamily;
+    font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    letter-spacing: -0.64px;
+  }
+
 }
