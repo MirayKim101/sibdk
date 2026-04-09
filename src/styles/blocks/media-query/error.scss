@@ -1,0 +1,45 @@
+@media(max-width: 992px) {
+  .page__error {
+    background-color: #F6F6F6;
+  }
+
+  .error {
+    &__wrapper.container {
+      padding: 0;
+    }
+
+    & .content {
+
+
+      & .content__inner {
+
+        border-radius: 20px;
+        background-color: #FDFDFF;
+
+        gap: 28px;
+        height: auto;
+
+        justify-content: start;
+
+        & h1 {
+          padding: 24px 15px 0 15px;
+        }
+
+        & .navigation {
+          max-width: 100%;
+
+          align-self: start;
+
+          padding: 0 16px;
+        }
+
+        & .image {
+          position: static;
+
+          width: 100%;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
