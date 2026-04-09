@@ -243,3 +243,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactsSlider = document.querySelector('.contacts__sliders .content__wrapper .slider__item.left .slider__item-wrapper .swiper');
+    if (!contactsSlider) return;
+
+    new Swiper(contactsSlider, {
+        modules: [Navigation],
+        slidesPerView: 1.3,
+        watchOverflow: true,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.contacts__sliders .content__wrapper .slider__item.left .slider__item-info .controls .next',
+            prevEl: '.contacts__sliders .content__wrapper .slider__item.left .slider__item-info .controls .prev',
+        },
+        breakpoints: {
+            0: {
+                spaceBetween: 10,
+                slidesPerView: 1.1
+            },
+            576: {
+                spaceBetween: 15,
+                slidesPerView: 1.2
+            },
+            767: {
+                spaceBetween: 20,
+                slidesPerView: 1.3
+            }
+        }
+
+
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactsSlider = document.querySelector('.contacts__sliders .content__wrapper .slider__item.right .slider__item-wrapper .swiper');
+    if (!contactsSlider) return;
+
+    new Swiper(contactsSlider, {
+        modules: [Navigation],
+        slidesPerView: 1.3,
+        watchOverflow: true,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.contacts__sliders .content__wrapper .slider__item.right .slider__item-info .controls .next',
+            prevEl: '.contacts__sliders .content__wrapper .slider__item.right .slider__item-info .controls .prev',
+        },
+        breakpoints: {
+            0: {
+                spaceBetween: 10,
+                slidesPerView: 1.1
+            },
+            576: {
+                spaceBetween: 15,
+                slidesPerView: 1.2
+            },
+            767: {
+                spaceBetween: 20,
+                slidesPerView: 1.3
+            }
+        }
+
+
+    });
+});
