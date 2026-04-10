@@ -1,19 +1,19 @@
 @use '../common/variables';
 
 
-.cart {
+.cart__page {
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  &__wrapper {
+  & .cart__wrapper {
     border-radius: 80px 80px 0 0;
     background-color: variables.$Back;
 
     padding: 40px 0;
   }
 
-  &__inner {
+  & .cart__inner {
     display: flex;
     flex-direction: column;
     gap: clamp(1.25rem, 1.135rem + 0.51vw, 1.75rem);
