@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cart</title>
 </head>
-<body class="page__contacts">
+<body class="page__cart">
 
 <div class="wrapper">
     <header class="header">
@@ -1370,8 +1370,606 @@
     <main>
 
         <section class="cart">
+            <nav class="breadcrumbs container" aria-label="breadcrumbs">
+                <div class="breadcrumbs__wrapper ">
+                    <ol class="breadcrumbs__list">
+                        <li class="breadcrumbs__list-item">
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__list-item" aria-current="page">
+                            <span>Корзина</span>
+                        </li>
+                    </ol>
+                </div>
+            </nav>
             <div class="cart__wrapper">
-                <div class="content"></div>
+                <div class="cart__inner container">
+                    <div class="cart__heading">
+                        <h1>Корзина</h1>
+                        <span>6 товаров</span>
+                    </div>
+                    <div class="cart__content">
+                        <div class="cart__content-container">
+
+                            <div class="heading">
+                                <label class="choice__all">
+                                    <input type="checkbox" name="all">
+                                    Выбрать все
+                                </label>
+
+                                <button class="clear__all">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                         fill="none">
+                                        <g clip-path="url(#clip0_973_196485)">
+                                            <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z"
+                                                  fill="#BDBEC2"/>
+                                            <path d="M11.667 1.66675C12.109 1.66675 12.5329 1.84234 12.8455 2.1549C13.1581 2.46746 13.3337 2.89139 13.3337 3.33341C13.3334 3.54581 13.2521 3.75011 13.1063 3.90456C12.9605 4.059 12.7612 4.15194 12.5492 4.16439C12.3371 4.17684 12.1283 4.10785 11.9655 3.97153C11.8026 3.8352 11.6979 3.64183 11.6728 3.43091L11.667 3.33341H8.33366L8.32783 3.43091C8.30274 3.64183 8.19806 3.8352 8.03519 3.97153C7.87231 4.10785 7.66352 4.17684 7.45149 4.16439C7.23945 4.15194 7.04017 4.059 6.89437 3.90456C6.74856 3.75011 6.66723 3.54581 6.66699 3.33341C6.66686 2.91293 6.82566 2.50794 7.11157 2.19962C7.39748 1.89131 7.78936 1.70245 8.20866 1.67091L8.33366 1.66675H11.667Z"
+                                                  fill="#BDBEC2"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_973_196485">
+                                                <rect width="20" height="20" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    Очистить корзину
+                                </button>
+                            </div>
+
+                            <div class="cart__list">
+                                <a href="#" class="cart__item">
+                                    <label class="cart__item-image">
+                                         <span class="image">
+                                             <img src="./src/public/images/hits_slider.png" alt="">
+                                         </span>
+
+                                        <input type="checkbox" class="cart__item-choice">
+                                    </label>
+
+                                    <div class="cart__item-info">
+                                        <div class="statuses">
+                                            <div class="statuses__item in-stock">
+                                                В наличии
+                                            </div>
+                                            <div class="statuses__item delivery">
+                                                Бесплатная доставка
+                                            </div>
+                                        </div>
+
+                                        <div class="text">
+                                            <h3 class="text__title">
+                                                Профнастил С-21х1000 | Zn 0.4 мм
+                                            </h3>
+                                            <p class="text__caption">Длина: 1, Ширина:1.15, Кол-во: 3, Площадь, 3.45
+                                                м2</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="controls">
+
+                                        <div class="controls__top">
+                                            <div class="cart__item-price">
+                                                <div class="price__current">4 470 ₽</div>
+                                                <div class="price__old">4 770 ₽</div>
+                                            </div>
+
+                                            <div class="cart__item-counter">
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                                                         viewBox="0 0 15 2" fill="none">
+                                                        <path d="M14.25 0.75H0.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" value="3" readonly>
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5.25V18.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M18.75 12H5.25" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="cart__item-delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_973_196803)">
+                                                    <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z" fill="#BDBEC2"/>
+                                                    <path d="M11.6665 1.66675C12.1085 1.66675 12.5325 1.84234 12.845 2.1549C13.1576 2.46746 13.3332 2.89139 13.3332 3.33341C13.3329 3.54581 13.2516 3.75011 13.1058 3.90456C12.96 4.059 12.7607 4.15194 12.5487 4.16439C12.3366 4.17684 12.1279 4.10785 11.965 3.97153C11.8021 3.8352 11.6974 3.64183 11.6723 3.43091L11.6665 3.33341H8.33317L8.32734 3.43091C8.30225 3.64183 8.19758 3.8352 8.0347 3.97153C7.87182 4.10785 7.66303 4.17684 7.451 4.16439C7.23896 4.15194 7.03969 4.059 6.89388 3.90456C6.74807 3.75011 6.66674 3.54581 6.6665 3.33341C6.66637 2.91293 6.82518 2.50794 7.11108 2.19962C7.39699 1.89131 7.78887 1.70245 8.20817 1.67091L8.33317 1.66675H11.6665Z" fill="#BDBEC2"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_973_196803">
+                                                        <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                </a>
+                                <a href="#" class="cart__item">
+                                    <label class="cart__item-image">
+                                         <span class="image">
+                                             <img src="./src/public/images/hits_slider.png" alt="">
+                                         </span>
+
+                                        <input type="checkbox" class="cart__item-choice">
+                                    </label>
+
+                                    <div class="cart__item-info">
+                                        <div class="statuses">
+                                            <div class="statuses__item in-stock">
+                                                В наличии
+                                            </div>
+                                            <div class="statuses__item delivery">
+                                                Бесплатная доставка
+                                            </div>
+                                        </div>
+
+                                        <div class="text">
+                                            <h3 class="text__title">
+                                                Профнастил С-21х1000 | Zn 0.4 мм
+                                            </h3>
+                                            <p class="text__caption">Длина: 1, Ширина:1.15, Кол-во: 3, Площадь, 3.45
+                                                м2</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="controls">
+
+                                        <div class="controls__top">
+                                            <div class="cart__item-price">
+                                                <div class="price__current">4 470 ₽</div>
+                                                <div class="price__old">4 770 ₽</div>
+                                            </div>
+
+                                            <div class="cart__item-counter">
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                                                         viewBox="0 0 15 2" fill="none">
+                                                        <path d="M14.25 0.75H0.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" value="3" readonly>
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5.25V18.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M18.75 12H5.25" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="cart__item-delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_973_196803)">
+                                                    <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z" fill="#BDBEC2"/>
+                                                    <path d="M11.6665 1.66675C12.1085 1.66675 12.5325 1.84234 12.845 2.1549C13.1576 2.46746 13.3332 2.89139 13.3332 3.33341C13.3329 3.54581 13.2516 3.75011 13.1058 3.90456C12.96 4.059 12.7607 4.15194 12.5487 4.16439C12.3366 4.17684 12.1279 4.10785 11.965 3.97153C11.8021 3.8352 11.6974 3.64183 11.6723 3.43091L11.6665 3.33341H8.33317L8.32734 3.43091C8.30225 3.64183 8.19758 3.8352 8.0347 3.97153C7.87182 4.10785 7.66303 4.17684 7.451 4.16439C7.23896 4.15194 7.03969 4.059 6.89388 3.90456C6.74807 3.75011 6.66674 3.54581 6.6665 3.33341C6.66637 2.91293 6.82518 2.50794 7.11108 2.19962C7.39699 1.89131 7.78887 1.70245 8.20817 1.67091L8.33317 1.66675H11.6665Z" fill="#BDBEC2"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_973_196803">
+                                                        <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                </a>
+                                <a href="#" class="cart__item">
+                                    <label class="cart__item-image">
+                                         <span class="image">
+                                             <img src="./src/public/images/hits_slider.png" alt="">
+                                         </span>
+
+                                        <input type="checkbox" class="cart__item-choice">
+                                    </label>
+
+                                    <div class="cart__item-info">
+                                        <div class="statuses">
+                                            <div class="statuses__item in-stock">
+                                                В наличии
+                                            </div>
+                                            <div class="statuses__item delivery">
+                                                Бесплатная доставка
+                                            </div>
+                                        </div>
+
+                                        <div class="text">
+                                            <h3 class="text__title">
+                                                Профнастил С-21х1000 | Zn 0.4 мм
+                                            </h3>
+                                            <p class="text__caption">Длина: 1, Ширина:1.15, Кол-во: 3, Площадь, 3.45
+                                                м2</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="controls">
+
+                                        <div class="controls__top">
+                                            <div class="cart__item-price">
+                                                <div class="price__current">4 470 ₽</div>
+                                                <div class="price__old">4 770 ₽</div>
+                                            </div>
+
+                                            <div class="cart__item-counter">
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                                                         viewBox="0 0 15 2" fill="none">
+                                                        <path d="M14.25 0.75H0.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" value="3" readonly>
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5.25V18.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M18.75 12H5.25" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="cart__item-delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_973_196803)">
+                                                    <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z" fill="#BDBEC2"/>
+                                                    <path d="M11.6665 1.66675C12.1085 1.66675 12.5325 1.84234 12.845 2.1549C13.1576 2.46746 13.3332 2.89139 13.3332 3.33341C13.3329 3.54581 13.2516 3.75011 13.1058 3.90456C12.96 4.059 12.7607 4.15194 12.5487 4.16439C12.3366 4.17684 12.1279 4.10785 11.965 3.97153C11.8021 3.8352 11.6974 3.64183 11.6723 3.43091L11.6665 3.33341H8.33317L8.32734 3.43091C8.30225 3.64183 8.19758 3.8352 8.0347 3.97153C7.87182 4.10785 7.66303 4.17684 7.451 4.16439C7.23896 4.15194 7.03969 4.059 6.89388 3.90456C6.74807 3.75011 6.66674 3.54581 6.6665 3.33341C6.66637 2.91293 6.82518 2.50794 7.11108 2.19962C7.39699 1.89131 7.78887 1.70245 8.20817 1.67091L8.33317 1.66675H11.6665Z" fill="#BDBEC2"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_973_196803">
+                                                        <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                </a>
+                                <a href="#" class="cart__item">
+                                    <label class="cart__item-image">
+                                         <span class="image">
+                                             <img src="./src/public/images/hits_slider.png" alt="">
+                                         </span>
+
+                                        <input type="checkbox" class="cart__item-choice">
+                                    </label>
+
+                                    <div class="cart__item-info">
+                                        <div class="statuses">
+                                            <div class="statuses__item in-stock">
+                                                В наличии
+                                            </div>
+                                            <div class="statuses__item delivery">
+                                                Бесплатная доставка
+                                            </div>
+                                        </div>
+
+                                        <div class="text">
+                                            <h3 class="text__title">
+                                                Профнастил С-21х1000 | Zn 0.4 мм
+                                            </h3>
+                                            <p class="text__caption">Длина: 1, Ширина:1.15, Кол-во: 3, Площадь, 3.45
+                                                м2</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="controls">
+
+                                        <div class="controls__top">
+                                            <div class="cart__item-price">
+                                                <div class="price__current">4 470 ₽</div>
+                                                <div class="price__old">4 770 ₽</div>
+                                            </div>
+
+                                            <div class="cart__item-counter">
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                                                         viewBox="0 0 15 2" fill="none">
+                                                        <path d="M14.25 0.75H0.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" value="3" readonly>
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5.25V18.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M18.75 12H5.25" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="cart__item-delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_973_196803)">
+                                                    <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z" fill="#BDBEC2"/>
+                                                    <path d="M11.6665 1.66675C12.1085 1.66675 12.5325 1.84234 12.845 2.1549C13.1576 2.46746 13.3332 2.89139 13.3332 3.33341C13.3329 3.54581 13.2516 3.75011 13.1058 3.90456C12.96 4.059 12.7607 4.15194 12.5487 4.16439C12.3366 4.17684 12.1279 4.10785 11.965 3.97153C11.8021 3.8352 11.6974 3.64183 11.6723 3.43091L11.6665 3.33341H8.33317L8.32734 3.43091C8.30225 3.64183 8.19758 3.8352 8.0347 3.97153C7.87182 4.10785 7.66303 4.17684 7.451 4.16439C7.23896 4.15194 7.03969 4.059 6.89388 3.90456C6.74807 3.75011 6.66674 3.54581 6.6665 3.33341C6.66637 2.91293 6.82518 2.50794 7.11108 2.19962C7.39699 1.89131 7.78887 1.70245 8.20817 1.67091L8.33317 1.66675H11.6665Z" fill="#BDBEC2"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_973_196803">
+                                                        <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                </a>
+                                <a href="#" class="cart__item">
+                                    <label class="cart__item-image">
+                                         <span class="image">
+                                             <img src="./src/public/images/hits_slider.png" alt="">
+                                         </span>
+
+                                        <input type="checkbox" class="cart__item-choice">
+                                    </label>
+
+                                    <div class="cart__item-info">
+                                        <div class="statuses">
+                                            <div class="statuses__item in-stock">
+                                                В наличии
+                                            </div>
+                                            <div class="statuses__item delivery">
+                                                Бесплатная доставка
+                                            </div>
+                                        </div>
+
+                                        <div class="text">
+                                            <h3 class="text__title">
+                                                Профнастил С-21х1000 | Zn 0.4 мм
+                                            </h3>
+                                            <p class="text__caption">Длина: 1, Ширина:1.15, Кол-во: 3, Площадь, 3.45
+                                                м2</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="controls">
+
+                                        <div class="controls__top">
+                                            <div class="cart__item-price">
+                                                <div class="price__current">4 470 ₽</div>
+                                                <div class="price__old">4 770 ₽</div>
+                                            </div>
+
+                                            <div class="cart__item-counter">
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                                                         viewBox="0 0 15 2" fill="none">
+                                                        <path d="M14.25 0.75H0.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" value="3" readonly>
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5.25V18.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M18.75 12H5.25" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="cart__item-delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_973_196803)">
+                                                    <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z" fill="#BDBEC2"/>
+                                                    <path d="M11.6665 1.66675C12.1085 1.66675 12.5325 1.84234 12.845 2.1549C13.1576 2.46746 13.3332 2.89139 13.3332 3.33341C13.3329 3.54581 13.2516 3.75011 13.1058 3.90456C12.96 4.059 12.7607 4.15194 12.5487 4.16439C12.3366 4.17684 12.1279 4.10785 11.965 3.97153C11.8021 3.8352 11.6974 3.64183 11.6723 3.43091L11.6665 3.33341H8.33317L8.32734 3.43091C8.30225 3.64183 8.19758 3.8352 8.0347 3.97153C7.87182 4.10785 7.66303 4.17684 7.451 4.16439C7.23896 4.15194 7.03969 4.059 6.89388 3.90456C6.74807 3.75011 6.66674 3.54581 6.6665 3.33341C6.66637 2.91293 6.82518 2.50794 7.11108 2.19962C7.39699 1.89131 7.78887 1.70245 8.20817 1.67091L8.33317 1.66675H11.6665Z" fill="#BDBEC2"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_973_196803">
+                                                        <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                </a>
+                                <a href="#" class="cart__item">
+                                    <label class="cart__item-image">
+                                         <span class="image">
+                                             <img src="./src/public/images/hits_slider.png" alt="">
+                                         </span>
+
+                                        <input type="checkbox" class="cart__item-choice">
+                                    </label>
+
+                                    <div class="cart__item-info">
+                                        <div class="statuses">
+                                            <div class="statuses__item in-stock">
+                                                В наличии
+                                            </div>
+                                            <div class="statuses__item delivery">
+                                                Бесплатная доставка
+                                            </div>
+                                        </div>
+
+                                        <div class="text">
+                                            <h3 class="text__title">
+                                                Профнастил С-21х1000 | Zn 0.4 мм
+                                            </h3>
+                                            <p class="text__caption">Длина: 1, Ширина:1.15, Кол-во: 3, Площадь, 3.45
+                                                м2</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="controls">
+
+                                        <div class="controls__top">
+                                            <div class="cart__item-price">
+                                                <div class="price__current">4 470 ₽</div>
+                                                <div class="price__old">4 770 ₽</div>
+                                            </div>
+
+                                            <div class="cart__item-counter">
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                                                         viewBox="0 0 15 2" fill="none">
+                                                        <path d="M14.25 0.75H0.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" value="3" readonly>
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5.25V18.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M18.75 12H5.25" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="cart__item-delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_973_196803)">
+                                                    <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z" fill="#BDBEC2"/>
+                                                    <path d="M11.6665 1.66675C12.1085 1.66675 12.5325 1.84234 12.845 2.1549C13.1576 2.46746 13.3332 2.89139 13.3332 3.33341C13.3329 3.54581 13.2516 3.75011 13.1058 3.90456C12.96 4.059 12.7607 4.15194 12.5487 4.16439C12.3366 4.17684 12.1279 4.10785 11.965 3.97153C11.8021 3.8352 11.6974 3.64183 11.6723 3.43091L11.6665 3.33341H8.33317L8.32734 3.43091C8.30225 3.64183 8.19758 3.8352 8.0347 3.97153C7.87182 4.10785 7.66303 4.17684 7.451 4.16439C7.23896 4.15194 7.03969 4.059 6.89388 3.90456C6.74807 3.75011 6.66674 3.54581 6.6665 3.33341C6.66637 2.91293 6.82518 2.50794 7.11108 2.19962C7.39699 1.89131 7.78887 1.70245 8.20817 1.67091L8.33317 1.66675H11.6665Z" fill="#BDBEC2"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_973_196803">
+                                                        <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                </a>
+                                <a href="#" class="cart__item">
+                                    <label class="cart__item-image">
+                                         <span class="image">
+                                             <img src="./src/public/images/hits_slider.png" alt="">
+                                         </span>
+
+                                        <input type="checkbox" class="cart__item-choice">
+                                    </label>
+
+                                    <div class="cart__item-info">
+                                        <div class="statuses">
+                                            <div class="statuses__item in-stock">
+                                                В наличии
+                                            </div>
+                                            <div class="statuses__item delivery">
+                                                Бесплатная доставка
+                                            </div>
+                                        </div>
+
+                                        <div class="text">
+                                            <h3 class="text__title">
+                                                Профнастил С-21х1000 | Zn 0.4 мм
+                                            </h3>
+                                            <p class="text__caption">Длина: 1, Ширина:1.15, Кол-во: 3, Площадь, 3.45
+                                                м2</p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="controls">
+
+                                        <div class="controls__top">
+                                            <div class="cart__item-price">
+                                                <div class="price__current">4 470 ₽</div>
+                                                <div class="price__old">4 770 ₽</div>
+                                            </div>
+
+                                            <div class="cart__item-counter">
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                                                         viewBox="0 0 15 2" fill="none">
+                                                        <path d="M14.25 0.75H0.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                                <input type="text" value="3" readonly>
+                                                <button>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none">
+                                                        <path d="M12 5.25V18.75" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M18.75 12H5.25" stroke="#9C0228" stroke-width="1.5"
+                                                              stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="cart__item-delete">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_973_196803)">
+                                                    <path d="M16.6667 5C16.8791 5.00024 17.0834 5.08157 17.2379 5.22737C17.3923 5.37318 17.4852 5.57246 17.4977 5.7845C17.5101 5.99653 17.4412 6.20532 17.3048 6.36819C17.1685 6.53107 16.9751 6.63575 16.7642 6.66083L16.6667 6.66667H16.5992L15.8334 15.8333C15.8334 16.471 15.5898 17.0846 15.1523 17.5485C14.7149 18.0125 14.1166 18.2918 13.4801 18.3292L13.3334 18.3333H6.66672C5.33505 18.3333 4.24672 17.2925 4.17339 16.0417L4.16922 15.9025L3.40005 6.66667H3.33339C3.12099 6.66643 2.91669 6.5851 2.76225 6.43929C2.6078 6.29349 2.51486 6.09421 2.50241 5.88217C2.48996 5.67014 2.55895 5.46135 2.69527 5.29847C2.8316 5.1356 3.02497 5.03092 3.23589 5.00583L3.33339 5H16.6667Z" fill="#BDBEC2"/>
+                                                    <path d="M11.6665 1.66675C12.1085 1.66675 12.5325 1.84234 12.845 2.1549C13.1576 2.46746 13.3332 2.89139 13.3332 3.33341C13.3329 3.54581 13.2516 3.75011 13.1058 3.90456C12.96 4.059 12.7607 4.15194 12.5487 4.16439C12.3366 4.17684 12.1279 4.10785 11.965 3.97153C11.8021 3.8352 11.6974 3.64183 11.6723 3.43091L11.6665 3.33341H8.33317L8.32734 3.43091C8.30225 3.64183 8.19758 3.8352 8.0347 3.97153C7.87182 4.10785 7.66303 4.17684 7.451 4.16439C7.23896 4.15194 7.03969 4.059 6.89388 3.90456C6.74807 3.75011 6.66674 3.54581 6.6665 3.33341C6.66637 2.91293 6.82518 2.50794 7.11108 2.19962C7.39699 1.89131 7.78887 1.70245 8.20817 1.67091L8.33317 1.66675H11.6665Z" fill="#BDBEC2"/>
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_973_196803">
+                                                        <rect width="20" height="20" fill="white"/>
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <div class="cart__content-total">
+                            <div class="total__wrapper">
+                                <h3 class="heading">Сумма заказа</h3>
+                                <div class="body">
+                                    <div class="price">
+                                        31 311 ₽
+                                        <span class="product__count">(6 товаров)</span>
+                                    </div>
+
+                                    <a class="order" href="/cartOrderPage">Перейти к оформлению</a>
+
+                                    <div class="sale__note">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                             fill="none">
+                                            <path d="M8.125 0C6.51803 0 4.94714 0.476523 3.611 1.36931C2.27485 2.2621 1.23344 3.53105 0.618482 5.0157C0.00352044 6.50035 -0.157382 8.13401 0.156123 9.71011C0.469628 11.2862 1.24346 12.7339 2.37976 13.8702C3.51606 15.0065 4.9638 15.7804 6.53989 16.0939C8.11599 16.4074 9.74966 16.2465 11.2343 15.6315C12.719 15.0166 13.9879 13.9752 14.8807 12.639C15.7735 11.3029 16.25 9.73197 16.25 8.125C16.2477 5.97081 15.391 3.90551 13.8677 2.38227C12.3445 0.85903 10.2792 0.00227486 8.125 0ZM8.125 13.125C7.93958 13.125 7.75833 13.07 7.60416 12.967C7.44999 12.864 7.32982 12.7176 7.25887 12.5463C7.18791 12.375 7.16934 12.1865 7.20552 12.0046C7.24169 11.8227 7.33098 11.6557 7.46209 11.5246C7.5932 11.3935 7.76025 11.3042 7.94211 11.268C8.12396 11.2318 8.31246 11.2504 8.48377 11.3214C8.65507 11.3923 8.80149 11.5125 8.90451 11.6667C9.00752 11.8208 9.0625 12.0021 9.0625 12.1875C9.0625 12.4361 8.96373 12.6746 8.78792 12.8504C8.6121 13.0262 8.37364 13.125 8.125 13.125ZM8.75 9.31875V9.375C8.75 9.54076 8.68416 9.69973 8.56695 9.81694C8.44974 9.93415 8.29076 10 8.125 10C7.95924 10 7.80027 9.93415 7.68306 9.81694C7.56585 9.69973 7.5 9.54076 7.5 9.375V8.75C7.5 8.58424 7.56585 8.42527 7.68306 8.30806C7.80027 8.19085 7.95924 8.125 8.125 8.125C9.1586 8.125 10 7.42188 10 6.5625C10 5.70312 9.1586 5 8.125 5C7.09141 5 6.25 5.70312 6.25 6.5625V6.875C6.25 7.04076 6.18416 7.19973 6.06695 7.31694C5.94973 7.43415 5.79076 7.5 5.625 7.5C5.45924 7.5 5.30027 7.43415 5.18306 7.31694C5.06585 7.19973 5 7.04076 5 6.875V6.5625C5 5.01172 6.40157 3.75 8.125 3.75C9.84844 3.75 11.25 5.01172 11.25 6.5625C11.25 7.92031 10.175 9.05703 8.75 9.31875Z"
+                                                  fill="#E7E7EA"/>
+                                        </svg>
+                                        <span class="sale__note-caption">Как получить скидку?</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

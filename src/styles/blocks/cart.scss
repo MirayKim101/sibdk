@@ -1,1 +1,244 @@
 @use '../common/variables';
+
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__wrapper {
+    border-radius: 80px 80px 0 0;
+    background-color: variables.$Back;
+
+    padding: 40px 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.25rem, 1.135rem + 0.51vw, 1.75rem);
+
+    & .cart__heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      & h1 {
+        color: variables.$Black;
+        font-family: variables.$FontFamily;
+        font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.64px;
+      }
+
+      & span {
+        color: variables.$MediumGrey;
+        font-family: variables.$FontFamily;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.4px;
+      }
+    }
+
+    & .cart__content {
+      display: grid;
+      grid-template-columns:1fr 453px;
+      gap: 20px;
+
+      &-container {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.5rem, 1.269rem + 1.03vw, 2.5rem);
+
+        border-radius: 16px;
+
+        background-color: #FDFDFF;
+
+        padding: 28px;
+
+        & .heading {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          & .choice__all {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            color: variables.$Black;
+            font-family: variables.$FontFamily;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: -0.28px;
+
+            cursor: pointer;
+
+            & input {
+              flex-shrink: 0;
+
+              -webkit-appearance: none;
+              appearance: none;
+
+              width: 20px;
+              height: 20px;
+
+              border-radius: 4px;
+
+              border: 1px solid variables.$LightGrey;
+
+              background-color: transparent;
+
+              transition: background-color variables.$time ease, border variables.$time ease;
+
+              &:checked {
+                background-color: variables.$Logo;
+
+                border: 1px solid variables.$Logo;
+
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12' fill='none'%3E%3Cpath d='M13.25 0.75L4.5 10.75L0.75 7' stroke='%23FDFDFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+
+              }
+            }
+
+          }
+
+          & .clear__all {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            color: variables.$MediumGrey;
+            font-family: variables.$FontFamily;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 110%;
+            letter-spacing: -0.28px;
+          }
+        }
+
+        & .cart__list {
+          display: flex;
+          flex-direction: column;
+          gap: 20px ;
+        }
+
+      }
+
+
+      &-total {
+        & .total__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          border-radius: 16px;
+
+          background-color: #FDFDFF;
+
+          box-shadow: 0 0 20px 0 rgba(200, 202, 214, 0.40);
+
+          padding: 20px;
+        }
+
+        & .heading {
+          color: variables.$Black;
+          font-family: variables.$FontFamily;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+
+          padding-bottom: 20px;
+
+          border-bottom: 1px solid #ECEDF0;
+        }
+
+        & .body {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          & .price {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+
+            color: variables.$Black;
+            font-family: variables.$FontFamily;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: -0.64px;
+
+            & .product__count {
+              align-self: end;
+
+              color: variables.$MediumGrey;
+              font-family: variables.$FontFamily;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 16px;
+            }
+
+
+          }
+
+          & .order {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 50px;
+
+            color: variables.$White;
+            font-family: variables.$FontFamily;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: -0.32px;
+
+            border-radius: 8px;
+            background-color: variables.$Logo;
+          }
+
+          & .sale__note {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            &-caption {
+              color: variables.$MediumGrey;
+              font-family: variables.$FontFamily;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 110%;
+              letter-spacing: -0.28px;
+
+              padding-bottom: 2px;
+
+              border-bottom: 1px solid #E7E7EA;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

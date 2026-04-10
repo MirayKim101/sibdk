@@ -1086,3 +1086,233 @@
     }
   }
 }
+
+.cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  &-image {
+    position: relative;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 8px;
+
+    border: 1px solid variables.$LightGrey;
+
+    overflow: hidden;
+
+    & .image {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      & img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-choice {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    flex-shrink: 0;
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 4px;
+
+    border: 1px solid variables.$LightGrey;
+
+    background-color: transparent;
+
+    transition: background-color variables.$time ease, border variables.$time ease;
+
+    &:checked {
+      background-color: variables.$Logo;
+
+      border: 1px solid variables.$Logo;
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12' fill='none'%3E%3Cpath d='M13.25 0.75L4.5 10.75L0.75 7' stroke='%23FDFDFF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    & .statuses {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #FDFDFF;
+        font-family: variables.$FontFamily;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+
+        border-radius: 6px;
+
+        padding: 6px 12px;
+
+        &.in-stock {
+          background-color: variables.$Green;
+        }
+
+        &.delivery {
+          background-color: variables.$Logo;
+        }
+      }
+    }
+
+    & .text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      &__title {
+        overflow: hidden;
+        color: variables.$Black;
+        font-family: variables.$FontFamily;
+        font-size: clamp(1rem, 0.942rem + 0.26vw, 1.25rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -0.4px;
+      }
+
+      &__caption {
+        overflow: hidden;
+        color: variables.$Grey;
+        font-family: variables.$FontFamily;
+        font-size: clamp(0.875rem, 0.846rem + 0.13vw, 1rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+      }
+    }
+  }
+
+  & .controls {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &__top {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & .cart__item-price {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & .price__current {
+          color: variables.$Black;
+          font-family: variables.$FontFamily;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+        }
+
+        & .price__old {
+          color: variables.$MediumGrey;
+          font-family: variables.$FontFamily;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+          letter-spacing: -0.4px;
+          text-decoration-line: line-through;
+        }
+      }
+
+      & .cart__item-counter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 217px;
+        height: 40px;
+
+        border-radius: 4px;
+
+        background: variables.$Back;
+
+        overflow: hidden;
+
+        & button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+        }
+
+        & input {
+          width: 77px;
+
+          text-align: center;
+
+          flex: 0 0 auto;
+
+          color: variables.$Grey;
+          font-family: variables.$FontFamily;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+
+    }
+
+    & .cart__item-delete {
+      display: flex;
+      align-items: center;
+      align-self: end;
+      gap: 8px;
+
+      & span {
+        color: variables.$MediumGrey;
+        font-family: variables.$FontFamily;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 110%;
+        letter-spacing: -0.28px;
+      }
+    }
+
+  }
+}
+
