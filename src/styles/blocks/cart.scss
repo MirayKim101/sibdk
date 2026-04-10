@@ -1,6 +1,5 @@
 @use '../common/variables';
 
-
 .cart__page {
   display: flex;
   flex-direction: column;
@@ -242,7 +241,6 @@
     }
   }
 }
-
 
 .order__page {
   padding-top: 20px;
@@ -694,6 +692,139 @@
       }
 
 
+    }
+  }
+}
+
+.success__page {
+  padding-top: 20px;
+
+  & .success__wrapper {
+
+    border-radius: 80px 80px 0 0;
+
+    background-color: variables.$Back;
+  }
+
+  & .success__inner {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3.75rem, 3.462rem + 1.28vw, 5rem);
+
+    padding-bottom: 40px;
+
+    & .success__heading {
+      position: relative;
+
+      width: 100%;
+      height: clamp(3.75rem, 3.173rem + 2.56vw, 6.25rem);
+
+      border-radius: 0 0 1000px 0;
+
+      background: linear-gradient(302deg, #F6F6F6 1.94%, #FFC6D4 93.55%);
+
+
+      & .image {
+        position: absolute;
+        top: clamp(0.625rem, 0.264rem + 1.6vw, 2.188rem);
+        left: 40px;
+
+        width: auto;
+        height: clamp(5rem, 4.38rem + 2.76vw, 7.688rem);
+
+        & img {
+          width: 100%;
+          height: 100%;
+
+          display: block;
+
+          object-fit: cover;
+
+        }
+      }
+    }
+
+    & .success__content {
+      max-width: 453px;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      & .text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        & h2 {
+          color: variables.$Black;
+          font-family: variables.$FontFamily;
+          font-size: clamp(1.5rem, 1.385rem + 0.51vw, 2rem);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 110%;
+          letter-spacing: -0.64px;
+        }
+
+        & p {
+          color: #787A7D;
+          font-family: variables.$FontFamily;
+          font-size: clamp(0.875rem, 0.846rem + 0.13vw, 1rem);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+
+      & .order__number {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        & .title {
+          color: variables.$Black;
+          font-family: variables.$FontFamily;
+          font-size: clamp(1.125rem, 1.096rem + 0.13vw, 1.25rem);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+          letter-spacing: -0.4px;
+        }
+
+        & .number {
+          color: variables.$Logo;
+          font-family: variables.$FontFamily;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px;
+        }
+      }
+
+      & .continue {
+        max-width: 217px;
+        width: 100%;
+        height: 52px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        color: #FDFDFF;
+        font-family: variables.$FontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        letter-spacing: -0.32px;
+
+        border-radius: 8px;
+
+        background-color: variables.$Logo;
+
+      }
     }
   }
 }
