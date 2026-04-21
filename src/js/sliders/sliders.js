@@ -276,7 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const contactsSlider = document.querySelector('.contacts__sliders .content__wrapper .slider__item.right .slider__item-wrapper .swiper');
     if (!contactsSlider) return;
@@ -307,4 +306,191 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const reviewsSlider = document.querySelector('.reviews .reviews__content .reviews__slider.swiper');
+    if (!reviewsSlider) return;
+
+    new Swiper(reviewsSlider, {
+        modules: [Navigation],
+        slidesPerView: 4,
+        watchOverflow: true,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.reviews__slider-button.next',
+            prevEl: '.reviews__slider-button.prev',
+        },
+
+
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const reviewsCardSliders = document.querySelectorAll('.reviews .reviews__card-images .images__slider.swiper');
+    if (reviewsCardSliders.length === 0) return;
+
+    reviewsCardSliders.forEach((slider) => {
+        new Swiper(slider, {
+            modules: [Pagination],
+            slidesPerView: 2.8,
+            spaceBetween: 8,
+            nested: true,
+
+        })
+    })
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const recentlySliderEl = document.querySelector('.recently .recently__slider');
+    if (!recentlySliderEl) return;
+
+    let recentlySwiper = null;
+
+    const initRecentlySlider = () => {
+        const isMobile = window.innerWidth < 576;
+
+        if (isMobile) {
+            if (recentlySwiper) {
+                recentlySwiper.destroy(true, true);
+                recentlySwiper = null;
+            }
+            return;
+        }
+
+        if (!recentlySwiper) {
+            recentlySwiper = new Swiper(recentlySliderEl, {
+                modules: [Navigation, Pagination],
+                slidesPerView: 5,
+                spaceBetween: 20,
+                watchOverflow: true,
+                navigation: {
+                    prevEl: '.recently .slider__button-prev',
+                    nextEl: '.recently .slider__button-next',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 'auto',
+                        enabled: false,
+                    },
+
+                    577: {
+                        slidesPerView: 2,
+                        enabled: true,
+                    },
+
+                    780: {
+                        slidesPerView: 3,
+                    },
+
+                    1024: {
+                        slidesPerView: 4,
+                    },
+
+                    1400: {
+                        slidesPerView: 5,
+                    }
+                }
+            });
+        }
+    };
+
+    initRecentlySlider();
+
+    window.addEventListener('resize', initRecentlySlider);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const recentlyInnerSliders = document.querySelectorAll('.recently .image__slider .swiper');
+    if (recentlyInnerSliders.length === 0) return;
+
+    recentlyInnerSliders.forEach((slider) => {
+        new Swiper(slider, {
+            modules: [Pagination],
+            slidesPerView: 1,
+            spaceBetween: 5,
+            nested: true,
+            pagination: {
+                el: slider.closest('.recently .product__card-content .image__wrapper').querySelector('.image__pagination'),
+                clickable: true,
+            },
+        })
+    })
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const relatedSliderEl = document.querySelector('.related .related__slider');
+    if (!relatedSliderEl) return;
+
+    let relatedSwiper = null;
+
+    const initRecentlySlider = () => {
+        const isMobile = window.innerWidth < 576;
+
+        if (isMobile) {
+            if (relatedSwiper) {
+                relatedSwiper.destroy(true, true);
+                relatedSwiper = null;
+            }
+            return;
+        }
+
+        if (!relatedSwiper) {
+            relatedSwiper = new Swiper(relatedSliderEl, {
+                modules: [Navigation, Pagination],
+                slidesPerView: 5,
+                spaceBetween: 20,
+                watchOverflow: true,
+                navigation: {
+                    prevEl: '.related .slider__button-prev',
+                    nextEl: '.related .slider__button-next',
+                },
+                breakpoints: {
+                    0: {
+                        slidesPerView: 'auto',
+                        enabled: false,
+                    },
+
+                    577: {
+                        slidesPerView: 2,
+                        enabled: true,
+                    },
+
+                    780: {
+                        slidesPerView: 3,
+                    },
+
+                    1024: {
+                        slidesPerView: 4,
+                    },
+
+                    1400: {
+                        slidesPerView: 5,
+                    }
+                }
+            });
+        }
+    };
+
+    initRecentlySlider();
+
+    window.addEventListener('resize', initRecentlySlider);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const relatedInnerSliders = document.querySelectorAll('.related .image__slider .swiper');
+    if (relatedInnerSliders.length === 0) return;
+
+    relatedInnerSliders.forEach((slider) => {
+        new Swiper(slider, {
+            modules: [Pagination],
+            slidesPerView: 1,
+            spaceBetween: 5,
+            nested: true,
+            pagination: {
+                el: slider.closest('.related .product__card-content .image__wrapper').querySelector('.image__pagination'),
+                clickable: true,
+            },
+        })
+    })
 });

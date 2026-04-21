@@ -23,3 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.reviews');
+
+    if (!section) return;
+
+    const cards = section.querySelectorAll('.reviews__card');
+
+    cards.forEach(card => {
+        const sectionContent = card.querySelector('.text__wrapper');
+        const sectionButton = card.querySelector('.more');
+        const buttonText = sectionButton.querySelector('span');
+
+        sectionButton.addEventListener('click', () => {
+            sectionContent.classList.toggle('active');
+
+            if (sectionContent.classList.contains('active')) {
+                buttonText.textContent = 'Скрыть';
+            } else {
+                buttonText.textContent = 'Подробнее';
+            }
+        });
+    });
+});
