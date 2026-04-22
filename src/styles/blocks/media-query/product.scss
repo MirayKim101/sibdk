@@ -1,0 +1,48 @@
+//@media(max-width: 1400px) {
+//  .product {
+//    & .content {
+//      & .info {
+//        display: flex;
+//        flex-direction: column;
+//
+//        &__sliders {
+//          max-width: 100%;
+//
+//          display: block;
+//
+//
+//          & .thumbs__slider {
+//            display: none;
+//          }
+//
+//          & .main__slider {
+//            height: clamp(22.5rem, 19.038rem + 15.38vw, 37.5rem);
+//
+//          }
+//        }
+//
+//
+//
+//
+//      }
+//    }
+//  }
+//}
+//
+//
+//@media(max-width: 576px) {
+//  .product {
+//    & .content {
+//      & .info {
+//
+//        &__sliders {
+//          & .main__slider {
+//            & .main__slider-button {
+//              display: none;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}

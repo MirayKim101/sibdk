@@ -494,3 +494,50 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const fractionEl = document.querySelector('.fractions');
+
+    const updateFraction = (swiper) => {
+        const current = swiper.realIndex + 1;
+        const total = swiper.slides.length;
+
+        fractionEl.textContent = `${current} / ${total}`;
+    };
+
+    const thumbsSwiper = new Swiper('.product .thumbs__slider .swiper', {
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        spaceBetween: 12,
+        watchSlidesProgress: true,
+    });
+
+    const mainSwiper = new Swiper('.product .main__slider .swiper', {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        modules: [Thumbs, Navigation, Pagination],
+
+        navigation: {
+            prevEl: '.main__slider-prev',
+            nextEl: '.main__slider-next',
+        },
+
+        thumbs: {
+            swiper: thumbsSwiper,
+        },
+
+        pagination: {
+            el: '.pagination__wrapper',
+            clickable: true,
+        },
+
+        on: {
+            init(swiper) {
+                updateFraction(swiper);
+            },
+            slideChange(swiper) {
+                updateFraction(swiper);
+            }
+        }
+    });
+});
