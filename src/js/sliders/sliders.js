@@ -322,7 +322,23 @@ document.addEventListener('DOMContentLoaded', () => {
             prevEl: '.reviews__slider-button.prev',
         },
 
-
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+            },
+            576: {
+                slidesPerView: 1.5,
+            },
+            767: {
+                slidesPerView: 2
+            },
+            992: {
+                slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 4,
+            }
+        }
     });
 });
 

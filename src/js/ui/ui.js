@@ -48,3 +48,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.product__caption');
+    if (!section) return;
+
+    const blocks = section.querySelectorAll('.text__wrapper');
+
+    blocks.forEach((block) => {
+        const text = block.querySelector('.text');
+        const button = block.querySelector('button');
+        const buttonText = button.querySelector('span');
+
+        button.addEventListener('click', () => {
+            const isOpen = text.classList.contains('active');
+
+            if (isOpen) {
+                text.style.maxHeight = text.scrollHeight + 'px';
+
+                requestAnimationFrame(() => {
+                    text.style.maxHeight = '200px';
+                });
+
+                text.classList.remove('active');
+                buttonText.textContent = 'Подробное описание';
+            } else {
+                text.style.maxHeight = text.scrollHeight + 'px';
+                text.classList.add('active');
+                buttonText.textContent = 'Скрыть описание';
+            }
+        });
+    });
+});

@@ -10,4 +10,5 @@ import './js/search/search.js';
 import './js/ui/ui.js';
 import './js/fancybox/fancybox.js';
 import './js/accordions/accordions.js';
+import './js/tabs/tabs.js';
 
