@@ -1353,3 +1353,356 @@
 
   }
 }
+
+
+.product__modal {
+  position: relative;
+
+  border-radius: 12px;
+  background-color: #FDFDFF;
+
+  max-width: 640px;
+  width: 100%;
+
+  & .modal {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    &__title {
+      font-family: variables.$FontFamily;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 110%;
+      letter-spacing: -0.02em;
+      color: variables.$Black;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-item {
+        width: 100%;
+
+        display: flex;
+        gap: 12px;
+
+        border-bottom: 1px solid variables.$MediumGrey;
+
+
+        padding-bottom: 24px;
+
+        &:not(:first-child) {
+          padding-top: 24px;
+        }
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        & .item__wrapper {
+          display: flex;
+          flex-direction: column;
+          flex-shrink: 0;
+          gap: 12px;
+
+          max-width: 120px;
+          width: 100%;
+
+          &-title {
+            font-family: variables.$FontFamily;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 100%;
+            color: variables.$Grey;
+          }
+
+          &-value.value {
+            font-family: variables.$FontFamily;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            color: variables.$Black;
+          }
+
+          &-value.input__value {
+            width: 100%;
+            height: 40px;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            & input {
+              width: 100%;
+              height: 100%;
+
+              background-color: variables.$Back;
+
+              font-family: variables.$FontFamily;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 140%;
+              color: variables.$Grey;
+            }
+          }
+
+          &-value.counter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+            height: 40px;
+            border-radius: 8px;
+
+            background-color: variables.$Back;
+
+            overflow: hidden;
+
+            & button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: 100%;
+            }
+
+            & input {
+              width: 40px;
+
+              text-align: center;
+
+              flex: 0 0 auto;
+
+              color: variables.$Grey;
+              font-family: variables.$FontFamily;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+            }
+          }
+        }
+
+        & .item__panel {
+          display: flex;
+          gap: 8px;
+
+          & .delete {
+            display: flex;
+            align-items: center;
+            align-self: end;
+            justify-content: center;
+
+            width: 40px;
+            height: 40px;
+
+            background: variables.$Back;
+
+            border-radius: 4px;
+
+            padding: 8px;
+
+
+          }
+
+        }
+      }
+
+    }
+
+    & .add__product {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      font-family: variables.$FontFamily;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: variables.$MediumGrey;
+    }
+
+    &__note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      border-radius: 8px;
+
+      padding: 16px;
+
+      background-color: variables.$Back;
+
+      &-item {
+        font-family: variables.$FontFamily;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: variables.$Grey;
+
+        & span {
+          font-family: variables.$FontFamily;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 140%;
+          color: variables.$Black;
+        }
+      }
+    }
+
+    &__total {
+      width: 100%;
+
+      display: flex;
+
+      border: 1px solid variables.$Line;
+
+      border-radius: 8px;
+
+      padding: 16px;
+
+      &-item {
+        max-width: 260px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        & .title {
+          font-family: variables.$FontFamily;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 100%;
+          color: variables.$MediumGrey;
+        }
+
+        & .value {
+          font-family: variables.$FontFamily;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 120%;
+          color: variables.$Black;
+        }
+
+        & .price {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          & .old {
+            font-family: variables.$FontFamily;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            text-decoration: line-through;
+            color: variables.$MediumGrey;
+          }
+
+          & .sale {
+            font-family: variables.$FontFamily;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 120%;
+            color: variables.$Logo;
+
+            border-radius: 4px;
+
+            padding: 4px 8px;
+
+            background-color: variables.$RedTag;
+          }
+        }
+      }
+
+    }
+
+    &__counter {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      height: 52px;
+
+      & .counter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 120px;
+        height: 100%;
+
+        border-radius: 8px;
+
+        background-color: variables.$Back;
+
+        overflow: hidden;
+
+        & button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+        }
+
+        & input {
+          width: 40px;
+
+          text-align: center;
+
+          flex: 0 0 auto;
+
+          color: variables.$Grey;
+          font-family: variables.$FontFamily;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+
+      & .cart {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        font-family: variables.$FontFamily;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        color: #fdfdff;
+
+        background-color: variables.$Logo;
+
+        border-radius: 8px;
+
+      }
+    }
+  }
+
+  & .f-button.is-close-button {
+    top: 16px;
+    right: 16px;
+    left: auto;
+
+    & svg {
+      stroke: variables.$MediumGrey;
+    }
+  }
+}
