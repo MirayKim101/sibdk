@@ -2032,3 +2032,58 @@
     }
   }
 }
+
+.cities__modal {
+  position: relative;
+
+  border-radius: 12px;
+  background-color: #FDFDFF;
+
+
+  & .f-button.is-close-button {
+    top: 16px;
+    right: 16px;
+    left: auto;
+
+    & svg {
+      stroke: variables.$MediumGrey;
+    }
+  }
+
+  & .modal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__title {
+      font-family: variables.$FontFamily;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 120%;
+      color: variables.$Black;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      & li {
+        font-family: variables.$FontFamily;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: variables.$Grey;
+      }
+    }
+
+    &__link {
+      align-self: end;
+      font-family: variables.$FontFamily;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: variables.$Logo;
+    }
+  }
+}
