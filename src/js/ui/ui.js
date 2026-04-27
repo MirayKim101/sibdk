@@ -81,3 +81,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.product__mobile-cart');
+
+    if (!modal) return;
+
+    const openModalButton = document.querySelector('.product__details .price__button');
+    const closeModalButton = modal.querySelector('.modal .top .top__title button');
+
+    openModalButton.addEventListener('click', () => {
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    })
+
+    closeModalButton.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    })
+
+})
