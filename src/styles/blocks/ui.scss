@@ -1128,11 +1128,12 @@
 .cart__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
+  gap: 20px;
 
   &-image {
     position: relative;
+
+    flex-shrink: 0;
 
     width: 160px;
     height: 160px;
@@ -1195,6 +1196,9 @@
   }
 
   &-info {
+    max-width: 454px;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -1231,6 +1235,8 @@
     }
 
     & .text {
+
+
       display: flex;
       flex-direction: column;
       gap: 8px;
@@ -1244,6 +1250,11 @@
         font-weight: 500;
         line-height: 120%;
         letter-spacing: -0.4px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
       }
 
       &__caption {
@@ -1259,9 +1270,14 @@
   }
 
   & .controls {
+    max-width: 217px;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 50px;
+
+    margin-left: auto;
 
     &__top {
       display: flex;
