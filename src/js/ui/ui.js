@@ -103,3 +103,23 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterCategories = document.querySelector('.catalog__category .filters .filters__categories');
+    if (!filterCategories) return;
+
+    const mainItems = filterCategories.querySelectorAll('.main__categories');
+
+    mainItems.forEach(item => {
+        const link = item.querySelector('a');
+
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // для теста на верстке
+
+            mainItems.forEach(el => el.classList.remove('active'));
+
+            item.classList.add('active');
+        });
+    });
+});

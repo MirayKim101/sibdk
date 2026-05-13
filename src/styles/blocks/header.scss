@@ -997,9 +997,14 @@
         &-content {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
+          align-items: start;
           gap: 20px;
 
+
+
           & .single__item {
+
+
             color: variables.$Black;
             font-family: variables.$FontFamily;
             font-size: 20px;
@@ -1010,6 +1015,8 @@
           }
 
           & .multi__item {
+
+
             &-item {
               display: flex;
               flex-direction: column;

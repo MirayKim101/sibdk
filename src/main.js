@@ -11,4 +11,5 @@ import './js/ui/ui.js';
 import './js/fancybox/fancybox.js';
 import './js/accordions/accordions.js';
 import './js/tabs/tabs.js';
+import './js/inputSlider/inputSlider.js';
 
