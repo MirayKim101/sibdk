@@ -136,3 +136,47 @@ document.addEventListener('DOMContentLoaded', () => {
         container.classList.toggle('active');
     })
 })
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.catalog__mobile');
+
+    if (!section) return;
+
+    const btn = section.querySelector('.sort__btn');
+    const container = section.querySelector('.sort__list');
+
+    btn.addEventListener('click', () => {
+        container.classList.toggle('active');
+        btn.classList.toggle('active');
+    })
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.catalog__mobile');
+
+    if (!section) return;
+
+    const btnList = section.querySelectorAll(
+        '.mobile__cards .product__card .control .cart'
+    );
+
+    const modal = document.querySelector('.cart__mobile');
+    const closeBtn = modal.querySelector('.close');
+
+    if (!modal || !closeBtn) return;
+
+    btnList.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.classList.add('active');
+
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+
+        document.body.style.overflow = '';
+    });
+});
