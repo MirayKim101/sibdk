@@ -123,3 +123,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.catalog__category');
+
+    if (!section) return;
+
+    const btn = section.querySelector('.popular__btn');
+    const container = section.querySelector('.popular__content');
+
+    btn.addEventListener('click', () => {
+        container.classList.toggle('active');
+    })
+})
