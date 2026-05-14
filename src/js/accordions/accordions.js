@@ -27,34 +27,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const containerList = document.querySelector('.attributes__inner');
+    const containerList = document.querySelectorAll('.attributes__inner');
 
-    if (!containerList) return;
+    if (!containerList.length) return;
 
-    const items = containerList.querySelectorAll('.attributes__group');
+    containerList.forEach(container => {
 
-    items.forEach(item => {
+        const items = container.querySelectorAll('.attributes__group');
 
-        const button = item.querySelector('.attributes__header');
+        items.forEach(item => {
 
-        button.addEventListener('click', () => {
+            const button = item.querySelector('.attributes__header');
 
-            item.classList.toggle('active');
+            if (!button) return;
+
+            button.addEventListener('click', () => {
+
+                item.classList.toggle('active');
+
+            });
 
         });
 
     });
 
 });
+
+
 document.addEventListener('DOMContentLoaded', () => {
-  const moreButtons = document.querySelectorAll('.attributes__more');
+
+    const moreButtons = document.querySelectorAll('.attributes__more');
 
     moreButtons.forEach(btn => {
+
         btn.addEventListener('click', () => {
+
             const group = btn.closest('.attributes__group');
 
-            group.classList.toggle('show-all');
-        })
-    })
-});
+            if (!group) return;
 
+            group.classList.toggle('show-all');
+
+        });
+
+    });
+
+});

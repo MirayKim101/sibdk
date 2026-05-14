@@ -137,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const section = document.querySelector('.catalog__mobile');
 
@@ -180,3 +179,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.catalog__mobile');
+
+    if (!section) return;
+
+    const btn = section.querySelector('.mobile__filters-btn');
+    const container = section.querySelector('.mobile__filters-attributes');
+    const close = section.querySelector('.attributes__heading .close');
+    btn.addEventListener('click', () => {
+        container.classList.toggle('active');
+        btn.classList.add('active');
+    })
+
+    close.addEventListener('click', () => {
+        container.classList.remove('active');
+    })
+})

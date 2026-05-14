@@ -1,12 +1,14 @@
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 
-const slider = document.getElementById('slider-price');
+const sliders = document.querySelectorAll('#slider-price, #slider-price2');
 
-if (slider) {
+sliders.forEach(slider => {
 
-    const minInput = document.querySelector('.price__field--min');
-    const maxInput = document.querySelector('.price__field--max');
+    const parent = slider.closest('.attributes__group');
+
+    const minInput = parent.querySelector('.price__field--min');
+    const maxInput = parent.querySelector('.price__field--max');
 
     noUiSlider.create(slider, {
         start: [100, 5000],
@@ -28,4 +30,4 @@ if (slider) {
 
     });
 
-}
+});
