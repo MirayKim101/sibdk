@@ -111,6 +111,27 @@
 
 
   }
+
+  .product__card {
+
+    &-content {
+
+      & .price {
+
+
+        &__wrapper {
+        flex-direction: column;
+        }
+
+        &__old {
+          align-self: start;
+        }
+
+      }
+
+
+    }
+  }
 }
 
 @media(max-width: 480px) {
