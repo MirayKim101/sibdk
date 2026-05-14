@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const section = document.querySelector('.reviews');
 
@@ -48,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const section = document.querySelector('.product__caption');
@@ -82,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.product__mobile-cart');
 
@@ -103,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const filterCategories = document.querySelector('.catalog__category .filters .filters__categories');
@@ -195,5 +191,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     close.addEventListener('click', () => {
         container.classList.remove('active');
+    })
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.catalog__mobile');
+
+    if (!section) return;
+
+    const btn = section.querySelector('.category__btn');
+    const container = document.querySelector('.category__menu');
+    const btnClose =document.querySelector('.category__menu .modal__heading button');
+
+    btn.addEventListener('click', () => {
+        container.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    })
+
+    btnClose.addEventListener('click', () => {
+        container.classList.remove('active');
+        document.body.style.overflow = '';
+
     })
 })
