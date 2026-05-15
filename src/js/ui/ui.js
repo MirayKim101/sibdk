@@ -215,3 +215,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 })
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.sale-page');
+
+    if (!section) return;
+
+    const btn = section.querySelector('.sort__button');
+    const container = document.querySelector('.sort__menu');
+
+    btn.addEventListener('click', () => {
+        container.classList.toggle('active');
+        btn.classList.toggle('active');
+
+        document.body.style.overflow = 'hidden';
+    })
+
+
+})

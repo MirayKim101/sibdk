@@ -1,5 +1,55 @@
 @use '/src/styles/common/variables.scss';
 
+@media(max-width: 1400px) {
+  .sale__page {
+    background-color: #F6F6F6;
+  }
+
+  .sale-page {
+
+    &__wrapper.container {
+      padding: 0;
+    }
+
+    &__heading {
+      padding: 20px 15px;
+
+      background-color: #fdfdff;
+
+      margin-bottom: 10px;
+
+      border-radius: 20px;
+    }
+
+    &__sort.sort {
+      background-color: #fdfdff;
+      padding: 16px 15px;
+      border-radius: 20px;
+
+      max-width: 100%;
+
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__cards {
+      padding: 0 15px;
+    }
+
+    &__more {
+      & .more {
+        background-color: #fdfdff;
+      }
+
+      & .pagination {
+        padding: 0 4px;
+      }
+    }
+  }
+}
+
 
 @media(max-width: 767px) {
   .sale {
@@ -72,6 +122,17 @@
       padding-right: 4px;
     }
   }
+
+  .sale-page {
+
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+
+  }
+
 }
 
 
