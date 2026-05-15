@@ -116,4 +116,36 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.header');
+
+    if (!section) return;
+
+    const btn = section.querySelector('.content__middle-address button');
+    const container = document.querySelector('.address__menu');
+
+    btn.addEventListener('click', () => {
+        container.classList.toggle('active');
+
+    })
+
+
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    const section = document.querySelector('.header');
+
+    if (!section) return;
+
+    const btn = section.querySelector('.item__mobile.socials__item.address button');
+
+    const container = document.querySelector('.address__mobile-menu');
+
+    btn.addEventListener('click', () => {
+        container.classList.toggle('active');
+
+    })
+
+
+})
 
